@@ -37,12 +37,12 @@
 
     --radius: 0.5rem;
 
-    /* Legal theme colors */
-    --legal-navy: 220 26% 14%;
-    --legal-blue: 210 100% 26%;
-    --legal-gold: 45 100% 51%;
-    --legal-gray: 210 6% 21%;
-    --legal-light-blue: 210 100% 97%;
+    /* Old Money Legal theme colors */
+    --legal-navy: 220 40% 15%;
+    --legal-blue: 220 25% 25%;
+    --legal-gold: 40 20% 65%;
+    --legal-gray: 220 10% 35%;
+    --legal-light-blue: 220 30% 95%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

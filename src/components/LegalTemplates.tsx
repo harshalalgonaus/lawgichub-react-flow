@@ -7,30 +7,30 @@ export const LegalTemplates = () => {
     {
       title: "Contract Templates",
       subtitle: "Employment & Service Agreements",
-      color: "bg-gray-900 text-white"
+      color: "bg-legal-navy text-white"
     },
     {
       title: "Litigation Forms",
       subtitle: "Court Filing & Discovery",
-      color: "bg-gray-800 text-white"
+      color: "bg-legal-blue text-white"
     },
     {
       title: "Corporate Documents",
       subtitle: "Formation & Compliance",
-      color: "bg-gray-700 text-white"
+      color: "bg-legal-gray text-white"
     },
     {
       title: "Real Estate",
       subtitle: "Purchase & Lease Agreements",
-      color: "bg-gray-600 text-white"
+      color: "bg-legal-gold text-legal-navy"
     }
   ];
 
   return (
-    <section className="py-16 px-6">
+    <section className="py-16 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-legal-navy mb-4">
             Complete legal workspace
           </h2>
         </div>
@@ -39,7 +39,7 @@ export const LegalTemplates = () => {
           {templates.map((template, index) => (
             <Card 
               key={index} 
-              className={`${template.color} p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in`}
+              className={`${template.color} p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in border-none`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-lg font-semibold mb-2">{template.title}</h3>
@@ -49,7 +49,7 @@ export const LegalTemplates = () => {
         </div>
         
         <div className="text-center">
-          <Button className="bg-[#FF6B6B] hover:bg-[#FF5252] text-white transition-all duration-300 transform hover:scale-105">
+          <Button className="bg-legal-gold hover:bg-legal-gold/90 text-legal-navy font-semibold transition-all duration-300 transform hover:scale-105">
             Browse All Templates
           </Button>
         </div>
