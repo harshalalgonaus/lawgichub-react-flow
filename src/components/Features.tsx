@@ -32,13 +32,13 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-16 px-6 bg-legal-light-blue">
+    <section className="py-16 px-6 bg-legal-cream">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-legal-navy mb-4">
+          <h2 className="text-4xl font-bold text-legal-black mb-4">
             Modern Legal Teams are Using Lawgichub Tools
           </h2>
-          <p className="text-xl text-legal-blue max-w-3xl mx-auto">
+          <p className="text-xl text-legal-charcoal max-w-3xl mx-auto">
             From case management to client relations, our comprehensive platform covers every aspect of modern legal practice.
           </p>
         </div>
@@ -47,12 +47,12 @@ export const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in bg-white border-legal-gold/20"
+              className="p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in bg-white border-legal-light-grey/30 hover:border-legal-accent-brown/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <feature.icon className="h-12 w-12 text-legal-blue mb-4" />
-              <h3 className="text-xl font-semibold text-legal-navy mb-3">{feature.title}</h3>
-              <p className="text-legal-gray">{feature.description}</p>
+              <feature.icon className="h-12 w-12 text-legal-brown mb-4" />
+              <h3 className="text-xl font-semibold text-legal-black mb-3">{feature.title}</h3>
+              <p className="text-legal-grey">{feature.description}</p>
             </Card>
           ))}
         </div>

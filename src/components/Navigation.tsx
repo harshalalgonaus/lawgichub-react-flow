@@ -54,12 +54,12 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-legal-navy/95 backdrop-blur-sm border-b border-legal-gold/20 z-50 transition-all duration-300">
+    <nav className="fixed top-0 w-full bg-legal-black/95 backdrop-blur-sm border-b border-legal-light-grey/20 z-50 transition-all duration-300">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Scale className="h-8 w-8 text-legal-gold" />
+            <Scale className="h-8 w-8 text-legal-accent-brown" />
             <span className="text-2xl font-bold text-white">Lawgichub</span>
           </div>
           
@@ -70,7 +70,7 @@ export const Navigation = () => {
                 {item.items.length > 0 ? (
                   <div className="relative">
                     <button
-                      className="flex items-center space-x-1 text-white hover:text-legal-gold transition-colors duration-200 py-2"
+                      className="flex items-center space-x-1 text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
                       onClick={() => handleDropdownToggle(item.title)}
                       onMouseEnter={() => setActiveDropdown(item.title)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -82,7 +82,7 @@ export const Navigation = () => {
                     {/* Dropdown Menu */}
                     {activeDropdown === item.title && (
                       <div
-                        className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-2 animate-fade-in"
+                        className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-legal-light-grey py-2 animate-fade-in"
                         onMouseEnter={() => setActiveDropdown(item.title)}
                         onMouseLeave={() => setActiveDropdown(null)}
                       >
@@ -90,7 +90,7 @@ export const Navigation = () => {
                           <a
                             key={subItem}
                             href="#"
-                            className="block px-4 py-2 text-sm text-legal-navy hover:bg-legal-light-blue hover:text-legal-blue transition-colors duration-200"
+                            className="block px-4 py-2 text-sm text-legal-charcoal hover:bg-legal-cream hover:text-legal-brown transition-colors duration-200"
                           >
                             {subItem}
                           </a>
@@ -101,7 +101,7 @@ export const Navigation = () => {
                 ) : (
                   <a
                     href="#"
-                    className="text-white hover:text-legal-gold transition-colors duration-200"
+                    className="text-white hover:text-legal-accent-brown transition-colors duration-200"
                   >
                     {item.title}
                   </a>
@@ -112,17 +112,17 @@ export const Navigation = () => {
 
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="ghost" className="text-white hover:bg-legal-gold/10 hover:text-legal-gold transition-all duration-200">
+            <Button variant="ghost" className="text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
               Client Portal
             </Button>
-            <Button className="bg-legal-gold hover:bg-legal-gold/90 text-legal-navy font-semibold transition-all duration-200 transform hover:scale-105">
+            <Button className="bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105">
               Get Started
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white hover:text-legal-gold transition-colors duration-200"
+            className="lg:hidden text-white hover:text-legal-accent-brown transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -131,14 +131,14 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 py-4 border-t border-legal-gold/20 animate-fade-in">
+          <div className="lg:hidden mt-4 py-4 border-t border-legal-light-grey/20 animate-fade-in">
             <div className="space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.title}>
                   {item.items.length > 0 ? (
                     <div>
                       <button
-                        className="flex items-center justify-between w-full text-white hover:text-legal-gold transition-colors duration-200 py-2"
+                        className="flex items-center justify-between w-full text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
                         onClick={() => handleDropdownToggle(item.title)}
                       >
                         <span>{item.title}</span>
@@ -150,7 +150,7 @@ export const Navigation = () => {
                             <a
                               key={subItem}
                               href="#"
-                              className="block text-gray-300 hover:text-legal-gold transition-colors duration-200 py-1"
+                              className="block text-legal-light-grey hover:text-legal-accent-brown transition-colors duration-200 py-1"
                             >
                               {subItem}
                             </a>
@@ -161,7 +161,7 @@ export const Navigation = () => {
                   ) : (
                     <a
                       href="#"
-                      className="block text-white hover:text-legal-gold transition-colors duration-200 py-2"
+                      className="block text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
                     >
                       {item.title}
                     </a>
@@ -170,11 +170,11 @@ export const Navigation = () => {
               ))}
               
               {/* Mobile Action Buttons */}
-              <div className="space-y-2 pt-4 border-t border-legal-gold/20">
-                <Button variant="ghost" className="w-full text-white hover:bg-legal-gold/10 hover:text-legal-gold transition-all duration-200">
+              <div className="space-y-2 pt-4 border-t border-legal-light-grey/20">
+                <Button variant="ghost" className="w-full text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
                   Client Portal
                 </Button>
-                <Button className="w-full bg-legal-gold hover:bg-legal-gold/90 text-legal-navy font-semibold transition-all duration-200">
+                <Button className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200">
                   Get Started
                 </Button>
               </div>

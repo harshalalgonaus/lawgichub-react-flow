@@ -63,13 +63,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Legal theme colors
+				// Polished Legal theme colors
 				legal: {
-					navy: 'hsl(var(--legal-navy))',
-					blue: 'hsl(var(--legal-blue))',
-					gold: 'hsl(var(--legal-gold))',
-					gray: 'hsl(var(--legal-gray))',
-					'light-blue': 'hsl(var(--legal-light-blue))'
+					black: 'hsl(var(--legal-black))',
+					charcoal: 'hsl(var(--legal-charcoal))',
+					grey: 'hsl(var(--legal-grey))',
+					'light-grey': 'hsl(var(--legal-light-grey))',
+					cream: 'hsl(var(--legal-cream))',
+					brown: 'hsl(var(--legal-brown))',
+					'light-brown': 'hsl(var(--legal-light-brown))',
+					'accent-brown': 'hsl(var(--legal-accent-brown))'
 				}
 			},
 			borderRadius: {

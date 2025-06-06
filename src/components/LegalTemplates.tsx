@@ -7,22 +7,22 @@ export const LegalTemplates = () => {
     {
       title: "Contract Templates",
       subtitle: "Employment & Service Agreements",
-      color: "bg-legal-navy text-white"
+      color: "bg-legal-black text-white"
     },
     {
       title: "Litigation Forms",
       subtitle: "Court Filing & Discovery",
-      color: "bg-legal-blue text-white"
+      color: "bg-legal-charcoal text-white"
     },
     {
       title: "Corporate Documents",
       subtitle: "Formation & Compliance",
-      color: "bg-legal-gray text-white"
+      color: "bg-legal-grey text-white"
     },
     {
       title: "Real Estate",
       subtitle: "Purchase & Lease Agreements",
-      color: "bg-legal-gold text-legal-navy"
+      color: "bg-legal-accent-brown text-white"
     }
   ];
 
@@ -30,7 +30,7 @@ export const LegalTemplates = () => {
     <section className="py-16 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-legal-navy mb-4">
+          <h2 className="text-4xl font-bold text-legal-black mb-4">
             Complete legal workspace
           </h2>
         </div>
@@ -49,7 +49,7 @@ export const LegalTemplates = () => {
         </div>
         
         <div className="text-center">
-          <Button className="bg-legal-gold hover:bg-legal-gold/90 text-legal-navy font-semibold transition-all duration-300 transform hover:scale-105">
+          <Button className="bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-300 transform hover:scale-105">
             Browse All Templates
           </Button>
         </div>

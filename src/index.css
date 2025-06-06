@@ -8,89 +8,92 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 26% 14%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 26% 14%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 14%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 220 26% 14%;
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 220 26% 14%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 220 26% 14%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 220 26% 14%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
 
     --radius: 0.5rem;
 
-    /* Old Money Legal theme colors */
-    --legal-navy: 220 40% 15%;
-    --legal-blue: 220 25% 25%;
-    --legal-gold: 40 20% 65%;
-    --legal-gray: 220 10% 35%;
-    --legal-light-blue: 220 30% 95%;
+    /* Polished Legal theme colors - Black, White, Grey, Brown */
+    --legal-black: 0 0% 9%;
+    --legal-charcoal: 0 0% 20%;
+    --legal-grey: 0 0% 45%;
+    --legal-light-grey: 0 0% 85%;
+    --legal-cream: 0 0% 97%;
+    --legal-brown: 30 25% 35%;
+    --legal-light-brown: 30 15% 75%;
+    --legal-accent-brown: 25 40% 60%;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 0% 9%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 9%;
   }
 
   .dark {
-    --background: 220 26% 14%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 26% 14%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 26% 14%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 220 26% 14%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 83%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 0% 83%;
   }
 }
 
@@ -106,35 +109,67 @@
 
 /* Custom legal theme utilities */
 @layer utilities {
-  .text-legal-navy {
-    color: hsl(var(--legal-navy));
+  .text-legal-black {
+    color: hsl(var(--legal-black));
   }
   
-  .text-legal-blue {
-    color: hsl(var(--legal-blue));
+  .text-legal-charcoal {
+    color: hsl(var(--legal-charcoal));
   }
   
-  .text-legal-gold {
-    color: hsl(var(--legal-gold));
+  .text-legal-grey {
+    color: hsl(var(--legal-grey));
   }
   
-  .bg-legal-navy {
-    background-color: hsl(var(--legal-navy));
+  .text-legal-light-grey {
+    color: hsl(var(--legal-light-grey));
   }
   
-  .bg-legal-blue {
-    background-color: hsl(var(--legal-blue));
+  .text-legal-brown {
+    color: hsl(var(--legal-brown));
   }
   
-  .bg-legal-gold {
-    background-color: hsl(var(--legal-gold));
+  .text-legal-accent-brown {
+    color: hsl(var(--legal-accent-brown));
   }
   
-  .bg-legal-light-blue {
-    background-color: hsl(var(--legal-light-blue));
+  .bg-legal-black {
+    background-color: hsl(var(--legal-black));
   }
   
-  .border-legal-gold {
-    border-color: hsl(var(--legal-gold));
+  .bg-legal-charcoal {
+    background-color: hsl(var(--legal-charcoal));
+  }
+  
+  .bg-legal-grey {
+    background-color: hsl(var(--legal-grey));
+  }
+  
+  .bg-legal-light-grey {
+    background-color: hsl(var(--legal-light-grey));
+  }
+  
+  .bg-legal-cream {
+    background-color: hsl(var(--legal-cream));
+  }
+  
+  .bg-legal-brown {
+    background-color: hsl(var(--legal-brown));
+  }
+  
+  .bg-legal-light-brown {
+    background-color: hsl(var(--legal-light-brown));
+  }
+  
+  .bg-legal-accent-brown {
+    background-color: hsl(var(--legal-accent-brown));
+  }
+  
+  .border-legal-accent-brown {
+    border-color: hsl(var(--legal-accent-brown));
+  }
+  
+  .border-legal-light-grey {
+    border-color: hsl(var(--legal-light-grey));
   }
 }
