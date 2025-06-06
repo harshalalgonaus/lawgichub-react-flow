@@ -47,10 +47,10 @@ export const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in bg-white border-legal-light-grey/30 hover:border-legal-accent-brown/50"
+              className="p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in bg-white border-legal-light-grey/30 hover:border-legal-accent-brown/50 shadow-lg"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <feature.icon className="h-12 w-12 text-legal-brown mb-4" />
+              <feature.icon className="h-12 w-12 text-legal-rich-brown mb-4" />
               <h3 className="text-xl font-semibold text-legal-black mb-3">{feature.title}</h3>
               <p className="text-legal-grey">{feature.description}</p>
             </Card>

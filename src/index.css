@@ -37,15 +37,16 @@
 
     --radius: 0.5rem;
 
-    /* Polished Legal theme colors - Black, White, Grey, Brown */
-    --legal-black: 0 0% 9%;
-    --legal-charcoal: 0 0% 20%;
-    --legal-grey: 0 0% 45%;
-    --legal-light-grey: 0 0% 85%;
-    --legal-cream: 0 0% 97%;
-    --legal-brown: 30 25% 35%;
-    --legal-light-brown: 30 15% 75%;
-    --legal-accent-brown: 25 40% 60%;
+    /* Sophisticated Legal theme colors - Black, White, Grey, Rich Browns */
+    --legal-black: 0 0% 5%;
+    --legal-charcoal: 0 0% 15%;
+    --legal-grey: 0 0% 40%;
+    --legal-light-grey: 0 0% 80%;
+    --legal-cream: 35 20% 96%;
+    --legal-brown: 20 30% 25%;
+    --legal-light-brown: 25 20% 85%;
+    --legal-accent-brown: 25 50% 45%;
+    --legal-rich-brown: 20 40% 35%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 20%;
@@ -133,6 +134,10 @@
     color: hsl(var(--legal-accent-brown));
   }
   
+  .text-legal-rich-brown {
+    color: hsl(var(--legal-rich-brown));
+  }
+  
   .bg-legal-black {
     background-color: hsl(var(--legal-black));
   }
@@ -165,11 +170,23 @@
     background-color: hsl(var(--legal-accent-brown));
   }
   
+  .bg-legal-rich-brown {
+    background-color: hsl(var(--legal-rich-brown));
+  }
+  
   .border-legal-accent-brown {
     border-color: hsl(var(--legal-accent-brown));
   }
   
   .border-legal-light-grey {
     border-color: hsl(var(--legal-light-grey));
+  }
+
+  .hover\:bg-legal-rich-brown:hover {
+    background-color: hsl(var(--legal-rich-brown));
+  }
+
+  .hover\:text-legal-accent-brown:hover {
+    color: hsl(var(--legal-accent-brown));
   }
 }

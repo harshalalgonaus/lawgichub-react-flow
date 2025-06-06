@@ -24,7 +24,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="bg-legal-accent-brown hover:bg-legal-brown text-white px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              className="bg-legal-accent-brown hover:bg-legal-rich-brown text-white px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg"
             >
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -33,7 +33,7 @@ export const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-2 border-legal-accent-brown text-legal-accent-brown hover:bg-legal-accent-brown hover:text-white px-8 py-4 text-lg transition-all duration-300"
+              className="border-2 border-legal-accent-brown text-legal-accent-brown hover:bg-legal-accent-brown hover:text-white px-8 py-4 text-lg transition-all duration-300 shadow-md hover:shadow-lg"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Demo

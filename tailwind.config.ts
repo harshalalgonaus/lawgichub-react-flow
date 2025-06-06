@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,7 +62,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Polished Legal theme colors
+				// Sophisticated Legal theme colors
 				legal: {
 					black: 'hsl(var(--legal-black))',
 					charcoal: 'hsl(var(--legal-charcoal))',
@@ -72,7 +71,8 @@ export default {
 					cream: 'hsl(var(--legal-cream))',
 					brown: 'hsl(var(--legal-brown))',
 					'light-brown': 'hsl(var(--legal-light-brown))',
-					'accent-brown': 'hsl(var(--legal-accent-brown))'
+					'accent-brown': 'hsl(var(--legal-accent-brown))',
+					'rich-brown': 'hsl(var(--legal-rich-brown))'
 				}
 			},
 			borderRadius: {
