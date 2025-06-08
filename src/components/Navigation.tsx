@@ -60,12 +60,12 @@ export const Navigation = () => {
                 {/* Logo */}
       <div className="flex items-center space-x-3">
         <img
-          src="/lawgichub_icon.png" // place image in public folder or serve via URL
+          src="/lawgichub_icon1.png" // place image in public folder or serve via URL
           alt="Lawgichub Logo"
           className="h-16 w-25"
         />
         <div className="flex flex-col leading-tight">
-          <span className="text-2xl font-bold text-legal-accent-cream">LawgicHub AI</span>
+          <span className="text-2xl font-bold text-white">LawgicHub AI</span>
           </div>
           </div>
           
