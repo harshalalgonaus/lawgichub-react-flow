@@ -57,10 +57,16 @@ export const Navigation = () => {
     <nav className="fixed top-0 w-full bg-legal-black/95 backdrop-blur-sm border-b border-legal-light-grey/20 z-50 transition-all duration-300">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Scale className="h-8 w-8 text-legal-accent-brown" />
-            <span className="text-2xl font-bold text-white">Lawgichub</span>
+                {/* Logo */}
+      <div className="flex items-center space-x-3">
+        <img
+          src="/lawgichub_icon.png" // place image in public folder or serve via URL
+          alt="Lawgichub Logo"
+          className="h-16 w-25"
+        />
+        <div className="flex flex-col leading-tight">
+          <span className="text-2xl font-bold text-legal-accent-cream">LawgicHub AI</span>
+          </div>
           </div>
           
           {/* Desktop Navigation */}
@@ -113,10 +119,10 @@ export const Navigation = () => {
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="ghost" className="text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
-              Client Portal
+              Login
             </Button>
             <Button className="bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105">
-              Get Started
+              Book Demo
             </Button>
           </div>
 
@@ -175,7 +181,7 @@ export const Navigation = () => {
                   Client Portal
                 </Button>
                 <Button className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200">
-                  Get Started
+                  Login
                 </Button>
               </div>
             </div>
