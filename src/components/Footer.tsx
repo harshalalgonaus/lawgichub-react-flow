@@ -8,8 +8,12 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <Scale className="h-8 w-8 text-legal-accent-brown" />
-              <span className="text-2xl font-bold">Lawgichub</span>
+                          <img
+              src="/lawgichub_icon1.png"
+              alt="Lawgichub Logo"
+              className="h-10 w-15"
+            />
+              <span className="text-2xl font-bold">Lawgichub AI</span>
             </div>
             <p className="text-legal-light-grey mb-6">
               The complete legal operations platform built for modern law firms.

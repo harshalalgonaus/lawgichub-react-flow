@@ -86,7 +86,7 @@ export const Navigation = () => {
           {/* Logo - Now Clickable */}
           <button 
             onClick={handleLogoClick}
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-legal-accent-brown focus:ring-offset-2 focus:ring-offset-legal-black rounded-lg"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
           >
             <img
               src="/lawgichub_icon1.png"
