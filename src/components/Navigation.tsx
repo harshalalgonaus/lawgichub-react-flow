@@ -1,11 +1,12 @@
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Scale, ChevronDown, Menu, X } from "lucide-react";
 
 export const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navigationItems = [
     {
@@ -49,37 +50,67 @@ export const Navigation = () => {
     }
   ];
 
+  const handleDropdownEnter = (title: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setActiveDropdown(title);
+  };
+
+  const handleDropdownLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150); // 150ms delay before hiding
+  };
+
   const handleDropdownToggle = (title: string) => {
     setActiveDropdown(activeDropdown === title ? null : title);
   };
+
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 w-full bg-legal-black/95 backdrop-blur-sm border-b border-legal-light-grey/20 z-50 transition-all duration-300">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-                {/* Logo */}
-      <div className="flex items-center space-x-3">
-        <img
-          src="/lawgichub_icon1.png" // place image in public folder or serve via URL
-          alt="Lawgichub Logo"
-          className="h-16 w-25"
-        />
-        <div className="flex flex-col leading-tight">
-          <span className="text-2xl font-bold text-white">LawgicHub AI</span>
-          </div>
-          </div>
+          {/* Logo - Now Clickable */}
+          <button 
+            onClick={handleLogoClick}
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-legal-accent-brown focus:ring-offset-2 focus:ring-offset-legal-black rounded-lg"
+          >
+            <img
+              src="/lawgichub_icon1.png"
+              alt="Lawgichub Logo"
+              className="h-16 w-25"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="text-2xl font-bold text-white">LawgicHub AI</span>
+            </div>
+          </button>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.items.length > 0 ? (
-                  <div className="relative">
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => handleDropdownEnter(item.title)}
+                    onMouseLeave={handleDropdownLeave}
+                  >
                     <button
-                      className="flex items-center space-x-1 text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
+                      className="flex items-center space-x-1 text-white hover:text-legal-accent-brown transition-colors duration-200 py-2 px-2"
                       onClick={() => handleDropdownToggle(item.title)}
-                      onMouseEnter={() => setActiveDropdown(item.title)}
-                      onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <span>{item.title}</span>
                       <ChevronDown className="h-4 w-4" />
@@ -87,11 +118,7 @@ export const Navigation = () => {
                     
                     {/* Dropdown Menu */}
                     {activeDropdown === item.title && (
-                      <div
-                        className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg border border-legal-light-grey py-2 animate-fade-in"
-                        onMouseEnter={() => setActiveDropdown(item.title)}
-                        onMouseLeave={() => setActiveDropdown(null)}
-                      >
+                      <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-legal-light-grey py-2 animate-fade-in z-50">
                         {item.items.map((subItem) => (
                           <a
                             key={subItem}
@@ -107,7 +134,7 @@ export const Navigation = () => {
                 ) : (
                   <a
                     href="#"
-                    className="text-white hover:text-legal-accent-brown transition-colors duration-200"
+                    className="text-white hover:text-legal-accent-brown transition-colors duration-200 px-2 py-2"
                   >
                     {item.title}
                   </a>
