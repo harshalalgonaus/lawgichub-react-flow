@@ -194,7 +194,7 @@ export const ProductShowcase = () => {
     
 
           {/* Right Side - Solution Information */}
-  <div className="flex-1 flex items-center justify-center">
+  <div className="flex-1 flex items-center ">
     <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 w-full max-w-xl">
             <div className="space-y-6">
               <div>
