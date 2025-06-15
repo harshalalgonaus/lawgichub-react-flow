@@ -10,7 +10,7 @@ import {
 
 const featureImages = [
   {
-    src: "case_management.jpg",
+    src: "case_management.jpeg",
     alt: "Legal Practice Management Dashboard",
     caption: "Case Management"
   },
@@ -18,6 +18,42 @@ const featureImages = [
     src: "exhibit.jpeg",
     alt: "Legal Document Editor",
     caption: "Exhibit Analysis"
+  }
+];
+
+const featureImagescase_m = [
+  {
+    src: "case_m1.jpeg",
+    alt: "Legal Practice Management Dashboard",
+    caption: "Case Manager"
+  },
+  {
+    src: "case_m2.jpeg",
+    alt: "Legal Document Editor",
+    caption: "File Manager"
+  }
+];
+
+const featureImagescase_q = [
+  {
+    src: "case_q1.jpeg",
+    alt: "Legal Practice Management Dashboard",
+    caption: "Exhibit Analysis"
+  },
+  {
+    src: "case_q2.jpeg",
+    alt: "Legal Document Editor",
+    caption: "Extraction Querying"
+  },
+    {
+    src: "case_q3.jpeg",
+    alt: "Legal Document Editor",
+    caption: "Vision Querying"
+  },
+    {
+    src: "case_q4.jpeg",
+    alt: "Legal Document Editor",
+    caption: "Normal Querying"
   }
 ];
 
@@ -40,7 +76,7 @@ export const ProductFeature = () => {
           <div className="p-8">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-semibold text-legal-charcoal mb-4">
-                Intelligent Case Management Dashboard
+               Case Processing
               </h3>
               <p className="text-legal-grey text-lg">
                 Comprehensive overview of all your cases, deadlines, and client communications in one unified interface
@@ -50,6 +86,90 @@ export const ProductFeature = () => {
             <Carousel className="w-full max-w-5xl mx-auto mb-8">
               <CarouselContent>
                 {featureImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-lg overflow-hidden shadow-xl group">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0"></div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                          <p className="text-legal-charcoal font-semibold text-sm">
+                            {image.caption}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
+              <CarouselNext className="right-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
+            </Carousel>
+            
+
+          </div>
+        </Card>
+
+        
+        <Card className="bg-white shadow-2xl border-0 overflow-hidden">
+          <div className="p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-semibold text-legal-charcoal mb-4">
+                Case Management
+              </h3>
+              <p className="text-legal-grey text-lg">
+                Comprehensive overview of all your cases, deadlines, and client communications in one unified interface
+              </p>
+            </div>
+            
+            <Carousel className="w-full max-w-5xl mx-auto mb-8">
+              <CarouselContent>
+                {featureImagescase_m.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-lg overflow-hidden shadow-xl group">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0"></div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                          <p className="text-legal-charcoal font-semibold text-sm">
+                            {image.caption}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
+              <CarouselNext className="right-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
+            </Carousel>
+            
+
+          </div>
+        </Card>
+
+        
+        <Card className="bg-white shadow-2xl border-0 overflow-hidden">
+          <div className="p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-semibold text-legal-charcoal mb-4">
+                Case Querying
+              </h3>
+              <p className="text-legal-grey text-lg">
+                Comprehensive overview of all your cases, deadlines, and client communications in one unified interface
+              </p>
+            </div>
+            
+            <Carousel className="w-full max-w-5xl mx-auto mb-8">
+              <CarouselContent>
+                {featureImagescase_q.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="relative rounded-lg overflow-hidden shadow-xl group">
                       <img
