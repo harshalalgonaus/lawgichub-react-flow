@@ -57,7 +57,7 @@ export const ProductFeature = () => {
                         alt={image.alt}
                         className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-legal-charcoal/30 to-transparent"></div>
+                      <div className="absolute inset-0"></div>
                       <div className="absolute bottom-4 left-4 right-4">
                         <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
                           <p className="text-legal-charcoal font-semibold text-sm">
