@@ -11,23 +11,23 @@ export const Features = () => {
     },
     {
       icon: Clock,
-      title: "Time Tracking",
-      description: "Intelligent time tracking that automatically categorizes billable and non-billable hours."
+      title: "Multiple Cases, One Dashboard",
+      description: "Manage all your matters in one place with case docketing, smart tracking, and a structured file manager."
     },
     {
       icon: FileText,
-      title: "Document Automation",
-      description: "Generate legal documents with AI-powered templates and clause libraries."
+      title: "Auto-Drafted Legal Docs",
+      description: "Create fully formatted drafts from scratch using our agentic AI — no templates, just intelligent, case-specific writing."
     },
     {
       icon: Users,
-      title: "Client Portal",
-      description: "Secure client communication and case updates through dedicated portals."
+      title: "AI-Powered Querying & Summarization",
+      description: "Our advanced querying tools like Exhibit Agentic Analysis, Context Querying, and Vision Querying;deliver precise, actionable insights in seconds."
     },
     {
       icon: TrendingUp,
-      title: "Analytics & Insights",
-      description: "Real-time dashboards and reports to optimize firm performance and profitability."
+      title: "Multi-Source Input Handling",
+      description: "Supports evolving case data from PDFs, handwritten notes, scanned forms, and ongoing conversations."
     }
   ];
 

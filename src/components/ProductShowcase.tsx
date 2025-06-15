@@ -103,10 +103,11 @@ export const ProductShowcase = () => {
         title: "Your Intelligent Legal Assistant",
         description: "Get instant insights and guidance on your cases. Our AI companion provides context-aware suggestions and helps you stay on top of every detail.",
         highlights: [
-          "Case status summaries at a glance",
-          "Smart next-step recommendations",
-          "Deadline and priority management",
-          "Intelligent case strategy insights"
+        "Agentic Drafting tailored to case context, tone, and structure",
+        "Auto-summarization of long legal texts, filings, and evidence",
+        "Smart suggestions based on case facts, jurisdiction, and past rulings",
+        "Adaptive Section Management to restructure content without losing flow"
+
         ]
       }
     },
@@ -128,10 +129,11 @@ export const ProductShowcase = () => {
         title: "Advanced Legal Analysis",
         description: "Conduct thorough legal analysis with advanced tools and comprehensive databases. Access years of legal precedents and scholarly articles in one platform.",
         highlights: [
-          "Multi-jurisdiction legal database",
-          "Advanced search and filtering",
-          "Citation tracking and analysis",
-          "Collaborative research tools"
+        "Identify legal patterns, contradictions, and inconsistencies across multiple documents",
+        "Extract, evaluate, and prioritize arguments based on legal weight and context",
+        "Construct clear, chronological case timelines for better understanding",
+        "Assess case risks and predict outcomes with data-driven analysis"
+
         ]
       }
     }
