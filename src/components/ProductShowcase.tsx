@@ -142,7 +142,7 @@ export const ProductShowcase = () => {
   const currentSolution = solutions[activeTab];
 
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section className="py-16 px-6 bg-legal-cream">
       <div className="container mx-auto max-w-7xl">
         {/* Hero Section */}
         <div className="text-center mb-16">
