@@ -207,47 +207,7 @@ export const ProductShowcase = () => {
           </div>
 
           {/* Right Side - Metrics & Analytics */}
-          <div className="space-y-8">
-            {/* Impact Metrics */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h4 className="text-2xl font-bold text-gray-900 mb-8">Impact Metrics</h4>
-              <div className="grid grid-cols-1 gap-8">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-green-500 mb-2">
-                    {currentSolution.metrics.efficiency}
-                  </div>
-                  <div className="text-gray-600">Efficiency Increase</div>
-                  <div className="w-full bg-gray-200 rounded-full h-3 mt-3">
-                    <div className="h-3 rounded-full bg-gradient-to-r from-green-400 to-green-500 w-3/4"></div>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-blue-500 mb-2">
-                    {currentSolution.metrics.timeReduction}
-                  </div>
-                  <div className="text-gray-600">Daily Time Saved</div>
-                  <div className="w-full bg-gray-200 rounded-full h-3 mt-3">
-                    <div className="h-3 rounded-full bg-gradient-to-r from-blue-400 to-blue-500 w-4/5"></div>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-purple-500 mb-2">
-                    {currentSolution.metrics.satisfaction}
-                  </div>
-                  <div className="text-gray-600">Client Satisfaction</div>
-                  <div className="w-full bg-gray-200 rounded-full h-3 mt-3">
-                    <div className="h-3 rounded-full bg-gradient-to-r from-purple-400 to-purple-500 w-11/12"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            
-
-
-          </div>
+          
         </div>
 
         {/* Bottom Impact Section */}
