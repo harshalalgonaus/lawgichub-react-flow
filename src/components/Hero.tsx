@@ -8,17 +8,15 @@ export const Hero = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transform your
+            Transforming
             <br />
-            <span className="text-legal-accent-cream">legal practice with</span>
+            <span className="text-legal-accent-cream">Legal Documents Into</span>
             <br />
-            intelligent solutions
+            Structured Intelligence
           </h1>
           
           <p className="text-xl text-legal-light-grey mb-8 max-w-3xl mx-auto leading-relaxed">
-            Lawgichub is the comprehensive legal operations platform designed by legal professionals 
-            for legal professionals. Streamline case management, automate document workflows, 
-            and maximize your firm's efficiency with AI-powered tools.
+            Lawgichub delivers AI-powered solutions built for legal professionals—enhancing case management, drafting, research, and legal query resolution with structure, precision, and clarity.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

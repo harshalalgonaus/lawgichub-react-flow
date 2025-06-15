@@ -10,24 +10,14 @@ import {
 
 const featureImages = [
   {
-    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=3882&q=80",
+    src: "case_management.jpg",
     alt: "Legal Practice Management Dashboard",
-    caption: "Comprehensive Case Management Interface"
+    caption: "Case Management"
   },
   {
-    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=4076&q=80",
+    src: "exhibit.jpeg",
     alt: "Legal Document Editor",
-    caption: "AI-Powered Document Creation"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=3543&q=80",
-    alt: "Legal Analytics Dashboard",
-    caption: "Advanced Analytics & Reporting"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80",
-    alt: "Client Communication Portal",
-    caption: "Streamlined Client Communications"
+    caption: "Exhibit Analysis"
   }
 ];
 
@@ -65,7 +55,7 @@ export const ProductFeature = () => {
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-legal-charcoal/30 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 right-4">
@@ -83,20 +73,7 @@ export const ProductFeature = () => {
               <CarouselNext className="right-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
             </Carousel>
             
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-legal-accent-brown mb-2">95%</div>
-                <div className="text-legal-grey">Accuracy Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-legal-accent-brown mb-2">60%</div>
-                <div className="text-legal-grey">Time Saved</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-legal-accent-brown mb-2">24/7</div>
-                <div className="text-legal-grey">AI Support</div>
-              </div>
-            </div>
+
           </div>
         </Card>
       </div>
