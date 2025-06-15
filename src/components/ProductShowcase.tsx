@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronRight, FileText, Scale, TrendingUp, Clock, Shield, Users, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { BookOpenCheck } from 'lucide-react'
@@ -31,7 +30,8 @@ export const ProductShowcase = () => {
           "File manager with original, processed & drafted files",
           "Multi-source updates for evolving case inputs"
         ]
-      }
+      },
+      image: 'case_manage.png'
     },
     {
       id: 'litigation-drafting',
@@ -57,7 +57,8 @@ export const ProductShowcase = () => {
         "Editable Word document output, properly formatted"
 
         ]
-      }
+      },
+      image: 'legal_draft.png'
     },
     {
       id: 'research-querying',
@@ -83,8 +84,9 @@ export const ProductShowcase = () => {
         "Track relationships and timelines across cases"
 
         ]
-      }
-    },
+      },
+      image: 'legal_research.png'
+       },
     {
       id: 'case-companion',
       title: 'AI Case Companion',
@@ -109,8 +111,9 @@ export const ProductShowcase = () => {
         "Adaptive Section Management to restructure content without losing flow"
 
         ]
-      }
-    },
+      },
+      image: 'case_companion.png'
+      },
     {
       id: 'legal-research',
       title: 'Legal Analysis and Research',
@@ -135,20 +138,21 @@ export const ProductShowcase = () => {
         "Assess case risks and predict outcomes with data-driven analysis"
 
         ]
+      },
+      image: 'legal_analysis.png'
       }
-    }
   ];
 
   const currentSolution = solutions[activeTab];
 
   return (
-    <section className="py-16 px-6 bg-legal-cream">
+    <section className="py-16 px-6 bg-gray-50">
       <div className="container mx-auto max-w-7xl">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Driving measurable impact for{' '}
-            <span className="bg-gradient-to-r text-legal-accent-brown to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-600 to-amber-700 bg-clip-text text-transparent">
               legal professionals
             </span>
           </h2>
@@ -179,80 +183,83 @@ export const ProductShowcase = () => {
         </div>
 
         {/* Main Content Area */}
-<div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Side - Solution Details */}
-  <div className="flex-1 space-y-4">
+          <div className="flex-1 space-y-4">
             <div>
               <div className={`inline-flex items-center space-x-3 px-6 py-3 rounded-full bg-gradient-to-r ${currentSolution.color} text-white mb-6`}>
                 {currentSolution.icon}
                 <span className="font-semibold text-lg">{currentSolution.title}</span>
               </div>
-   
-          
-
-            {/* Feature List */}
-           
-
-            {/* Contract Analysis Risk Alert (shown only for contract analysis tab) */}
- 
-    
-
-          {/* Right Side - Solution Information */}
-  <div className="flex-1 flex items-center ">
-    <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 w-full max-w-xl">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {currentSolution.rightContent.title}
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  {currentSolution.rightContent.description}
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-gray-900 flex items-center">
-                  <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                  Key Benefits
-                </h4>
-                <div className="space-y-3">
-                  {currentSolution.rightContent.highlights.map((highlight, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{highlight}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className={`bg-gradient-to-r ${currentSolution.color} rounded-xl p-6 text-white`}>
-                <div className="flex items-center justify-between">
+              
+              {/* Solution Information */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div className="space-y-6">
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Ready to get started?</h4>
-                    <p className="text-sm opacity-90">Explore this feature and see how it can transform your practice</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {currentSolution.rightContent.title}
+                    </h3>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                      {currentSolution.rightContent.description}
+                    </p>
                   </div>
-                  <ArrowRight className="w-6 h-6" />
-                </div>
-              </div>
 
-              {/* Additional Info Cards */}
-              <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="bg-gray-50 rounded-lg p-4 text-center">
-                  <Clock className="w-8 h-8 mx-auto mb-2 text-gray-600" />
-                  <div className="text-sm font-medium text-gray-900">Quick Setup</div>
-                  <div className="text-xs text-gray-600">5 minutes</div>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-4 text-center">
-                  <Shield className="w-8 h-8 mx-auto mb-2 text-gray-600" />
-                  <div className="text-sm font-medium text-gray-900">Secure</div>
-                  <div className="text-xs text-gray-600">Bank-level</div>
+                  <div className="space-y-4">
+                    <h4 className="text-lg font-semibold text-gray-900 flex items-center">
+                      <Star className="w-5 h-5 mr-2 text-yellow-500" />
+                      Key Benefits
+                    </h4>
+                    <div className="space-y-3">
+                      {currentSolution.rightContent.highlights.map((highlight, index) => (
+                        <div key={index} className="flex items-start space-x-3">
+                          <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className={`bg-gradient-to-r ${currentSolution.color} rounded-xl p-6 text-white`}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-semibold text-lg mb-1">Ready to get started?</h4>
+                        <p className="text-sm opacity-90">Explore this feature and see how it can transform your practice</p>
+                      </div>
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </div>
+
+                  {/* Additional Info Cards */}
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    <div className="bg-gray-50 rounded-lg p-4 text-center">
+                      <Clock className="w-8 h-8 mx-auto mb-2 text-gray-600" />
+                      <div className="text-sm font-medium text-gray-900">Quick Setup</div>
+                      <div className="text-xs text-gray-600">5 minutes</div>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4 text-center">
+                      <Shield className="w-8 h-8 mx-auto mb-2 text-gray-600" />
+                      <div className="text-sm font-medium text-gray-900">Secure</div>
+                      <div className="text-xs text-gray-600">Bank-level</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Right Side - Solution Image */}
+<div className="flex-1 flex items-center justify-center">
+  <div className="w-full max-w-3xl"> {/* Increased max-width */}
+    <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+      <img 
+        src={currentSolution.image} 
+        alt={`${currentSolution.title} illustration`}
+        className="w-full h-[550px] object-cover transition-transform duration-500 hover:scale-105" // Increased height
+      />
+
+              </div>
+            </div>
           </div>
-          </div>
-                </div>
         </div>
       </div>
     </section>
