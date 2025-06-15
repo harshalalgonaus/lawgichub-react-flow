@@ -38,7 +38,7 @@ export const LegalTemplates = () => {
           <Card key={index} className={`p-6 ${template.color} hover:scale-105 transition-transform`}>
             <h3 className="text-xl font-semibold mb-2">{template.title}</h3>
             <p className="text-sm opacity-90 mb-4">{template.subtitle}</p>
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full text-black">
               View Templates
             </Button>
           </Card>
