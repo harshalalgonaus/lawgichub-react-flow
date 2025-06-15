@@ -1,8 +1,8 @@
+
 import React, { useState } from 'react';
-import { ChevronRight, FileText, Scale, TrendingUp } from 'lucide-react';
+import { ChevronRight, FileText, Scale, TrendingUp, Clock, Shield, Users, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { BookOpenCheck } from 'lucide-react'
 import { Gavel } from 'lucide-react'
-
 
 export const ProductShowcase = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -22,10 +22,15 @@ export const ProductShowcase = () => {
         { name: 'Court Filing', status: 'pending', progress: 0 },
         { name: 'Client Communication', status: 'active', progress: 100 }
       ],
-      metrics: {
-        efficiency: '45%',
-        timeReduction: '3.2h',
-        satisfaction: '94%'
+      rightContent: {
+        title: "Comprehensive Case Organization",
+        description: "Manage every aspect of your legal cases from a single, intuitive platform. Our case management system helps you stay organized, meet deadlines, and provide exceptional client service.",
+        highlights: [
+          "Centralized document storage and retrieval",
+          "Automated deadline tracking and reminders",
+          "Seamless client communication portal",
+          "Integrated billing and time tracking"
+        ]
       }
     },
     {
@@ -42,10 +47,15 @@ export const ProductShowcase = () => {
         { name: 'Compliance Check', status: 'in-progress', progress: 80 },
         { name: 'Version Comparison', status: 'pending', progress: 0 }
       ],
-      metrics: {
-        efficiency: '60%',
-        timeReduction: '4.5h',
-        satisfaction: '96%'
+      rightContent: {
+        title: "AI-Powered Legal Drafting",
+        description: "Leverage artificial intelligence to create precise, compliant legal documents faster than ever. Our AI understands legal language and helps you draft with confidence.",
+        highlights: [
+          "Smart clause suggestions and improvements",
+          "Real-time compliance checking",
+          "Automated risk identification",
+          "Professional template library"
+        ]
       }
     },
     {
@@ -62,10 +72,15 @@ export const ProductShowcase = () => {
         { name: 'Invoice Generation', status: 'active', progress: 100 },
         { name: 'Payment Processing', status: 'in-progress', progress: 75 }
       ],
-      metrics: {
-        efficiency: '70%',
-        timeReduction: '2.8h',
-        satisfaction: '92%'
+      rightContent: {
+        title: "Intelligent Legal Research",
+        description: "Transform how you conduct legal research with smart querying capabilities. Find relevant cases, statutes, and legal precedents in seconds, not hours.",
+        highlights: [
+          "Natural language legal queries",
+          "Comprehensive case law database",
+          "Citation analysis and verification",
+          "Personalized research recommendations"
+        ]
       }
     },
     {
@@ -82,10 +97,15 @@ export const ProductShowcase = () => {
         { name: 'Invoice Generation', status: 'active', progress: 100 },
         { name: 'Payment Processing', status: 'in-progress', progress: 75 }
       ],
-      metrics: {
-        efficiency: '70%',
-        timeReduction: '2.8h',
-        satisfaction: '92%'
+      rightContent: {
+        title: "Your Intelligent Legal Assistant",
+        description: "Get instant insights and guidance on your cases. Our AI companion provides context-aware suggestions and helps you stay on top of every detail.",
+        highlights: [
+          "Case status summaries at a glance",
+          "Smart next-step recommendations",
+          "Deadline and priority management",
+          "Intelligent case strategy insights"
+        ]
       }
     },
     {
@@ -102,10 +122,15 @@ export const ProductShowcase = () => {
         { name: 'Invoice Generation', status: 'active', progress: 100 },
         { name: 'Payment Processing', status: 'in-progress', progress: 75 }
       ],
-      metrics: {
-        efficiency: '70%',
-        timeReduction: '2.8h',
-        satisfaction: '92%'
+      rightContent: {
+        title: "Advanced Legal Analysis",
+        description: "Conduct thorough legal analysis with advanced tools and comprehensive databases. Access years of legal precedents and scholarly articles in one platform.",
+        highlights: [
+          "Multi-jurisdiction legal database",
+          "Advanced search and filtering",
+          "Citation tracking and analysis",
+          "Collaborative research tools"
+        ]
       }
     }
   ];
@@ -206,12 +231,59 @@ export const ProductShowcase = () => {
             )}
           </div>
 
-          {/* Right Side - Metrics & Analytics */}
-          
+          {/* Right Side - Solution Information */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {currentSolution.rightContent.title}
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  {currentSolution.rightContent.description}
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-gray-900 flex items-center">
+                  <Star className="w-5 h-5 mr-2 text-yellow-500" />
+                  Key Benefits
+                </h4>
+                <div className="space-y-3">
+                  {currentSolution.rightContent.highlights.map((highlight, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className={`bg-gradient-to-r ${currentSolution.color} rounded-xl p-6 text-white`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-semibold text-lg mb-1">Ready to get started?</h4>
+                    <p className="text-sm opacity-90">Explore this feature and see how it can transform your practice</p>
+                  </div>
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+              </div>
+
+              {/* Additional Info Cards */}
+              <div className="grid grid-cols-2 gap-4 mt-6">
+                <div className="bg-gray-50 rounded-lg p-4 text-center">
+                  <Clock className="w-8 h-8 mx-auto mb-2 text-gray-600" />
+                  <div className="text-sm font-medium text-gray-900">Quick Setup</div>
+                  <div className="text-xs text-gray-600">5 minutes</div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-4 text-center">
+                  <Shield className="w-8 h-8 mx-auto mb-2 text-gray-600" />
+                  <div className="text-sm font-medium text-gray-900">Secure</div>
+                  <div className="text-xs text-gray-600">Bank-level</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Bottom Impact Section */}
-
       </div>
     </section>
   );
