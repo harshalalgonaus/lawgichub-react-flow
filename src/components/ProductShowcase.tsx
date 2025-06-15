@@ -26,10 +26,10 @@ export const ProductShowcase = () => {
         title: "Comprehensive Case Organization",
         description: "Manage every aspect of your legal cases from a single, intuitive platform. Our case management system helps you stay organized, meet deadlines, and provide exceptional client service.",
         highlights: [
-          "Centralized document storage and retrieval",
-          "Automated deadline tracking and reminders",
-          "Seamless client communication portal",
-          "Integrated billing and time tracking"
+          "Case docketing with auto-data extraction",
+          "Centralized case view with timeline tracking",
+          "File manager with original, processed & drafted files",
+          "Multi-source updates for evolving case inputs"
         ]
       }
     },
@@ -51,10 +51,11 @@ export const ProductShowcase = () => {
         title: "AI-Powered Legal Drafting",
         description: "Leverage artificial intelligence to create precise, compliant legal documents faster than ever. Our AI understands legal language and helps you draft with confidence.",
         highlights: [
-          "Smart clause suggestions and improvements",
-          "Real-time compliance checking",
-          "Automated risk identification",
-          "Professional template library"
+        "Create first drafts based on case-specific context",
+        "Adaptive section editing and regeneration",
+        "No template restrictions true agentic writing",
+        "Editable Word document output, properly formatted"
+
         ]
       }
     },
@@ -76,10 +77,11 @@ export const ProductShowcase = () => {
         title: "Intelligent Legal Research",
         description: "Transform how you conduct legal research with smart querying capabilities. Find relevant cases, statutes, and legal precedents in seconds, not hours.",
         highlights: [
-          "Natural language legal queries",
-          "Comprehensive case law database",
-          "Citation analysis and verification",
-          "Personalized research recommendations"
+        "Context Querying for deep semantic answers",
+        "Vision Querying to extract data from visuals/tables",
+        "Exhibit Agentic Analysis for pinpoint document review",
+        "Track relationships and timelines across cases"
+
         ]
       }
     },
@@ -144,7 +146,7 @@ export const ProductShowcase = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Driving measurable impact for{' '}
-            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r text-legal-accent-brown to-red-500 bg-clip-text text-transparent">
               legal professionals
             </span>
           </h2>
