@@ -1,5 +1,35 @@
 
 import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const featureImages = [
+  {
+    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=3882&q=80",
+    alt: "Legal Practice Management Dashboard",
+    caption: "Comprehensive Case Management Interface"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=4076&q=80",
+    alt: "Legal Document Editor",
+    caption: "AI-Powered Document Creation"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=3543&q=80",
+    alt: "Legal Analytics Dashboard",
+    caption: "Advanced Analytics & Reporting"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80",
+    alt: "Client Communication Portal",
+    caption: "Streamlined Client Communications"
+  }
+];
 
 export const ProductFeature = () => {
   return (
@@ -27,16 +57,33 @@ export const ProductFeature = () => {
               </p>
             </div>
             
-            <div className="relative rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=3882&q=80"
-                alt="Legal Practice Management Dashboard"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-legal-charcoal/20 to-transparent"></div>
-            </div>
+            <Carousel className="w-full max-w-5xl mx-auto mb-8">
+              <CarouselContent>
+                {featureImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-lg overflow-hidden shadow-xl group">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-legal-charcoal/30 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                          <p className="text-legal-charcoal font-semibold text-sm">
+                            {image.caption}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
+              <CarouselNext className="right-4 bg-white/80 hover:bg-white border-legal-light-grey text-legal-charcoal hover:text-legal-accent-brown" />
+            </Carousel>
             
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-legal-accent-brown mb-2">95%</div>
                 <div className="text-legal-grey">Accuracy Rate</div>
