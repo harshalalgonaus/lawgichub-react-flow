@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Scale, ChevronDown, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -46,7 +47,8 @@ export const Navigation = () => {
     },
     {
       title: "Contact",
-      items: []
+      items: [],
+      link: "/contact"
     }
   ];
 
@@ -84,8 +86,8 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Now Clickable */}
-          <button 
-            onClick={handleLogoClick}
+          <Link 
+            to="/"
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
           >
             <img
@@ -96,7 +98,7 @@ export const Navigation = () => {
             <div className="flex flex-col leading-tight">
               <span className="text-2xl font-bold text-white">LawgicHub AI</span>
             </div>
-          </button>
+          </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -132,12 +134,21 @@ export const Navigation = () => {
                     )}
                   </div>
                 ) : (
-                  <a
-                    href="#"
-                    className="text-white hover:text-legal-accent-brown transition-colors duration-200 px-2 py-2"
-                  >
-                    {item.title}
-                  </a>
+                  item.link ? (
+                    <Link
+                      to={item.link}
+                      className="text-white hover:text-legal-accent-brown transition-colors duration-200 px-2 py-2"
+                    >
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <a
+                      href="#"
+                      className="text-white hover:text-legal-accent-brown transition-colors duration-200 px-2 py-2"
+                    >
+                      {item.title}
+                    </a>
+                  )
                 )}
               </div>
             ))}
@@ -148,9 +159,11 @@ export const Navigation = () => {
             <Button variant="ghost" className="text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
               Login
             </Button>
-            <Button className="bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105">
-              Book Demo
-            </Button>
+            <Link to="/book-demo">
+              <Button className="bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105">
+                Book Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -192,12 +205,22 @@ export const Navigation = () => {
                       )}
                     </div>
                   ) : (
-                    <a
-                      href="#"
-                      className="block text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
-                    >
-                      {item.title}
-                    </a>
+                    item.link ? (
+                      <Link
+                        to={item.link}
+                        className="block text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.title}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#"
+                        className="block text-white hover:text-legal-accent-brown transition-colors duration-200 py-2"
+                      >
+                        {item.title}
+                      </a>
+                    )
                   )}
                 </div>
               ))}
@@ -205,11 +228,13 @@ export const Navigation = () => {
               {/* Mobile Action Buttons */}
               <div className="space-y-2 pt-4 border-t border-legal-light-grey/20">
                 <Button variant="ghost" className="w-full text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
-                  Client Portal
-                </Button>
-                <Button className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200">
                   Login
                 </Button>
+                <Link to="/book-demo" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200">
+                    Book Demo
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
