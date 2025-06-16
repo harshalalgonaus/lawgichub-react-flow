@@ -125,26 +125,31 @@ export const Testimonials = () => {
           <Card className="p-8 bg-legal-light-brown border-legal-accent-brown/20 sticky top-8">
             <div className="space-y-6">
               <div className="text-lg font-semibold text-legal-navy">
-                Transform your legal practice with:
+                Lawgichub is a ecosystem which transforms your legal practice with: 
               </div>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-brown">40% reduction in administrative tasks</span>
+                  <span className="text-legal-brown">From drafting and docketing to analysis and insights, every feature is built for real world legal needs.</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-brown">Automated document generation and review</span>
+                  <span className="text-legal-brown">It eliminates repetitive tasks, reduces manual errors, and boosts productivity across the board.</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-brown">Real-time case and billing management</span>
+                  <span className="text-legal-brown">AI works behind the scenes  adapting to your case context, tone, and legal requirements.</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-brown">Enhanced client communication and satisfaction</span>
+                  <span className="text-legal-brown">Firms data stays secure, your workflow stays efficient, and your team stays ahead.</span>
                 </li>
+
               </ul>
+                            <div className="text-lg font-semibold text-legal-navy">
+Because in law, every second counts and Lawgichub helps you make it matter.
+
+              </div>
             </div>
           </Card>
         </div>
