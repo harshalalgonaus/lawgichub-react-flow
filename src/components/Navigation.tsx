@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Scale, ChevronDown, Menu, X } from "lucide-react";
@@ -31,7 +32,8 @@ export const Navigation = () => {
     },
     {
       title: "Pricing",
-      items: []
+      items: [],
+      link: "/pricing"
     },
     {
       title: "Contact",
