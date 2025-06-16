@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Scale, ChevronDown, Menu, X } from "lucide-react";
@@ -10,17 +9,6 @@ export const Navigation = () => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const navigationItems = [
-    {
-      title: "Practice Areas",
-      items: [
-        "Corporate Law",
-        "Litigation",
-        "Real Estate",
-        "Employment Law",
-        "Intellectual Property",
-        "Tax Law"
-      ]
-    },
     {
       title: "Solutions",
       items: [
@@ -49,6 +37,11 @@ export const Navigation = () => {
       title: "Contact",
       items: [],
       link: "/contact"
+    },
+    {
+      title: "Careers",
+      items: [],
+      link: "/careers"
     }
   ];
 
