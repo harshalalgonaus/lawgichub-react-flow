@@ -1,13 +1,6 @@
 
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export const Testimonials = () => {
   const testimonials = [
@@ -52,58 +45,52 @@ export const Testimonials = () => {
           </h2>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index}>
-                    <div className="space-y-6">
-                      <div className="flex space-x-1 mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-legal-gold text-legal-gold" />
-                        ))}
-                      </div>
-                      <blockquote className="text-xl text-legal-navy leading-relaxed">
-                        "{testimonial.quote}"
-                      </blockquote>
-                      <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-legal-light-blue rounded-full"></div>
-                        <div>
-                          <div className="font-semibold text-legal-navy">{testimonial.name}</div>
-                          <div className="text-sm text-legal-blue">{testimonial.position}, {testimonial.company}</div>
-                        </div>
-                      </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+          <div className="grid gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="p-6 bg-white border-legal-light-grey/30">
+                <div className="space-y-4">
+                  <div className="flex space-x-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-legal-gold text-legal-gold" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg text-legal-navy leading-relaxed">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-legal-light-brown rounded-full"></div>
+                    <div>
+                      <div className="font-semibold text-legal-navy">{testimonial.name}</div>
+                      <div className="text-sm text-legal-grey">{testimonial.position}, {testimonial.company}</div>
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-0" />
-              <CarouselNext className="right-0" />
-            </Carousel>
+                  </div>
+                </div>
+              </Card>
+            ))}
           </div>
           
-          <Card className="p-8 bg-legal-light-blue border-legal-gold/20">
+          <Card className="p-8 bg-legal-light-brown border-legal-accent-brown/20 sticky top-8">
             <div className="space-y-6">
               <div className="text-lg font-semibold text-legal-navy">
                 Transform your legal practice with:
               </div>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-legal-gold rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-blue">40% reduction in administrative tasks</span>
+                  <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
+                  <span className="text-legal-brown">40% reduction in administrative tasks</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-legal-gold rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-blue">Automated document generation and review</span>
+                  <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
+                  <span className="text-legal-brown">Automated document generation and review</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-legal-gold rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-blue">Real-time case and billing management</span>
+                  <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
+                  <span className="text-legal-brown">Real-time case and billing management</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-legal-gold rounded-full mt-2 mr-3"></div>
-                  <span className="text-legal-blue">Enhanced client communication and satisfaction</span>
+                  <div className="w-2 h-2 bg-legal-accent-brown rounded-full mt-2 mr-3"></div>
+                  <span className="text-legal-brown">Enhanced client communication and satisfaction</span>
                 </li>
               </ul>
             </div>
