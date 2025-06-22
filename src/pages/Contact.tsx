@@ -67,14 +67,8 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold text-legal-black mb-2">
                       Email Us
                     </h3>
-                    <p className="text-legal-charcoal mb-1">
-                      General inquiries: info@lawgichub.com
-                    </p>
-                    <p className="text-legal-charcoal mb-1">
-                      Sales: sales@lawgichub.com
-                    </p>
                     <p className="text-legal-charcoal">
-                      Support: support@lawgichub.com
+                      Support: lawgichub@aiomnivergesolutions.com
                     </p>
                   </div>
                 </div>
@@ -122,10 +116,10 @@ const Contact = () => {
                       Business Hours
                     </h3>
                     <p className="text-legal-charcoal mb-1">
-                      Monday - Friday: 8:00 AM - 6:00 PM PST
+                      Monday - Friday: 8:00 AM - 6:00 PM IST
                     </p>
                     <p className="text-legal-charcoal mb-1">
-                      Saturday: 9:00 AM - 2:00 PM PST
+                      Saturday: 9:00 AM - 2:00 PM IST
                     </p>
                     <p className="text-legal-charcoal">
                       Sunday: Closed
@@ -134,17 +128,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <Card className="p-6 bg-legal-cream">
-                <h3 className="text-xl font-semibold text-legal-black mb-4">
-                  Quick Response Times
-                </h3>
-                <ul className="space-y-2 text-legal-charcoal">
-                  <li>• Sales inquiries: Within 2 hours</li>
-                  <li>• General questions: Within 24 hours</li>
-                  <li>• Technical support: Within 4 hours</li>
-                  <li>• Partnership opportunities: Within 48 hours</li>
-                </ul>
-              </Card>
+
             </div>
 
             {/* Contact Form */}

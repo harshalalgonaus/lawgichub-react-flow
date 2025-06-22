@@ -41,10 +41,10 @@ const BookDemo = () => {
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-legal-black to-legal-charcoal">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            See LawgicHub AI in Action
+            Experience What LawgicHub AI Can Do for You
           </h1>
           <p className="text-xl text-legal-light-grey mb-8 max-w-2xl mx-auto">
-            Book a personalized demo and discover how our AI-powered platform can transform your legal practice.
+            Request a customized demo to see how LawgicHub AI empowers your practice with intelligent automation and insight-driven efficiency.
           </p>
         </div>
       </section>

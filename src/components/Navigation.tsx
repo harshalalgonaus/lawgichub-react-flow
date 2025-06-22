@@ -14,10 +14,10 @@ export const Navigation = () => {
       title: "Solutions",
       items: [
         "Case Management",
-        "Document Automation",
-        "Time Tracking",
-        "Client Portal",
-        "Billing & Invoicing"
+        "AI Litigation Drafting",
+        "Smart Legal Querying",
+        "AI Case Companion",
+        "Legal Analysis and Research"
       ]
     },
     {

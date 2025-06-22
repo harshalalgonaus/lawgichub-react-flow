@@ -84,7 +84,7 @@ const Careers = () => {
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-legal-black to-legal-charcoal">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Join Our Team
+            Come Build With Us
           </h1>
           <p className="text-xl text-legal-light-grey mb-8 max-w-2xl mx-auto">
             Be part of the revolution in legal technology. Help us build AI-powered solutions that transform how legal professionals work.
@@ -92,7 +92,7 @@ const Careers = () => {
           <div className="flex items-center justify-center space-x-8 text-legal-light-grey">
             <div className="flex items-center space-x-2">
               <Users className="h-5 w-5" />
-              <span>50+ Team Members</span>
+              <span>20+ Team Members</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-5 w-5" />
@@ -110,19 +110,19 @@ const Careers = () => {
       <section className="py-16 px-4 bg-legal-cream">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-legal-black text-center mb-12">
-            Why Work at LawgicHub AI?
+            Why Choose a Career at LawgicHub?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Briefcase className="h-6 w-6 text-legal-accent-brown" />
-                  <span>Cutting-Edge Technology</span>
+                  <span>Innovate</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-legal-charcoal">
-                  Work with the latest AI/ML technologies, modern web frameworks, and cloud-native architectures to solve real-world legal challenges.
+                  Work on smart legal tech solutions that transform the industry.
                 </p>
               </CardContent>
             </Card>
@@ -131,12 +131,12 @@ const Careers = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Users className="h-6 w-6 text-legal-accent-brown" />
-                  <span>Collaborative Culture</span>
+                  <span>Grow Continuously</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-legal-charcoal">
-                  Join a diverse, inclusive team that values innovation, continuous learning, and making a meaningful impact in the legal industry.
+                  Access learning opportunities and career growth in a dynamic environment.
                 </p>
               </CardContent>
             </Card>
@@ -145,12 +145,12 @@ const Careers = () => {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <DollarSign className="h-6 w-6 text-legal-accent-brown" />
-                  <span>Growth & Benefits</span>
+                  <span>Collaborate & Thrive</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-legal-charcoal">
-                  Competitive compensation, equity options, comprehensive benefits, and unlimited opportunities for professional development.
+                  Join a supportive team that values creativity, diversity, and shared success.
                 </p>
               </CardContent>
             </Card>
