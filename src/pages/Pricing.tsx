@@ -58,12 +58,12 @@ const Pricing = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold text-legal-black mb-6">
+      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-legal-black to-legal-charcoal">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Invest in Efficiency & See the Difference
           </h1>
-          <p className="text-xl text-legal-grey max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-legal-light-grey mb-8 max-w-2xl mx-auto">
             From solo lawyers to large firms, get pricing perfectly tailored to your legal needs.
           </p>
         </div>

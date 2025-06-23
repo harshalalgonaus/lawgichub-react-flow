@@ -12,12 +12,12 @@ export default function About() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-legal-black to-legal-charcoal">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-legal-black mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Lawgichub AI
           </h1>
-          <p className="text-xl text-legal-grey mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-legal-light-grey mb-8 max-w-2xl mx-auto">
             We're revolutionizing legal practice through intelligent technology, empowering lawyers to deliver exceptional results while focusing on what matters most.
           </p>
         </div>
