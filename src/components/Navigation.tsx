@@ -13,22 +13,17 @@ export const Navigation = () => {
     {
       title: "Solutions",
       items: [
-        "Case Management",
-        "AI Litigation Drafting",
-        "Smart Legal Querying",
-        "AI Case Companion",
-        "Legal Analysis and Research"
+        { name: "Case Management", link: "/case-management" },
+        { name: "AI Litigation Drafting", link: "/ai-litigation-drafting" },
+        { name: "Smart Legal Querying", link: "/smart-legal-querying" },
+        { name: "AI Case Companion", link: "/ai-case-companion" },
+        { name: "Legal Analysis and Research", link: "/legal-analysis-research" }
       ]
     },
     {
-      title: "Resources",
-      items: [
-        "Legal Templates",
-        "Knowledge Base",
-        "Webinars",
-        "White Papers",
-        "Blog"
-      ]
+      title: "Company's Vision",
+      items: [],
+      link: "/company-vision"
     },
     {
       title: "Pricing",
@@ -117,13 +112,13 @@ export const Navigation = () => {
                     {activeDropdown === item.title && (
                       <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-legal-light-grey py-2 animate-fade-in z-50">
                         {item.items.map((subItem) => (
-                          <a
-                            key={subItem}
-                            href="#"
+                          <Link
+                            key={subItem.name}
+                            to={subItem.link}
                             className="block px-4 py-2 text-sm text-legal-charcoal hover:bg-legal-cream hover:text-legal-brown transition-colors duration-200"
                           >
-                            {subItem}
-                          </a>
+                            {subItem.name}
+                          </Link>
                         ))}
                       </div>
                     )}
@@ -188,13 +183,14 @@ export const Navigation = () => {
                       {activeDropdown === item.title && (
                         <div className="mt-2 pl-4 space-y-2">
                           {item.items.map((subItem) => (
-                            <a
-                              key={subItem}
-                              href="#"
+                            <Link
+                              key={subItem.name}
+                              to={subItem.link}
                               className="block text-legal-light-grey hover:text-legal-accent-brown transition-colors duration-200 py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              {subItem}
-                            </a>
+                              {subItem.name}
+                            </Link>
                           ))}
                         </div>
                       )}
