@@ -1,5 +1,6 @@
 
 import { Scale, Twitter, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -8,11 +9,11 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-                          <img
-              src="/lawgichub_icon1.png"
-              alt="Lawgichub Logo"
-              className="h-10 w-15"
-            />
+              <img
+                src="/lawgichub_icon1.png"
+                alt="Lawgichub Logo"
+                className="h-10 w-15"
+              />
               <span className="text-2xl font-bold">Lawgichub AI</span>
             </div>
             <p className="text-legal-light-grey mb-6">
@@ -48,10 +49,16 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-legal-accent-brown">Company</h4>
             <ul className="space-y-2 text-legal-light-grey">
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Careers</a></li>
+              <li>
+                <Link to="/about" className="hover:text-legal-accent-brown transition-colors">About</Link>
+              </li>
+              <li>
+                <Link to="/careers" className="hover:text-legal-accent-brown transition-colors">Careers</Link>
+              </li>
               <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Press</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Contact</a></li>
+              <li>
+                <Link to="/contact" className="hover:text-legal-accent-brown transition-colors">Contact</Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -9,6 +9,7 @@ import BookDemo from "./pages/BookDemo";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import Pricing from "./pages/Pricing";
+import About from "./pages/About";
 import CaseManagement from "./pages/CaseManagement";
 import AiLitigationDrafting from "./pages/AiLitigationDrafting";
 import SmartLegalQuerying from "./pages/SmartLegalQuerying";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
           <Route path="/case-management" element={<CaseManagement />} />
           <Route path="/ai-litigation-drafting" element={<AiLitigationDrafting />} />
           <Route path="/smart-legal-querying" element={<SmartLegalQuerying />} />
