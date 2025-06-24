@@ -1,7 +1,7 @@
 
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Gavel, CheckCircle, Clock, Shield, ArrowRight, Star } from "lucide-react";
+import { Gavel, CheckCircle, Clock, Shield, ArrowRight, Star, FileText, Scale, Search, MapPin, TrendingUp, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -30,6 +30,85 @@ export default function AiCaseCompanion() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Case Companion Features Section */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">AI CASE COMPANION</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We build a case from scratch and help a lawyer to identify all the necessary pointers that are important for him to consider while making a case, and also help him to take the correct steps forward, to gain maximum advantage to his client and case.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Case Briefing */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-orange-500">
+              <div className="flex items-center mb-4">
+                <div className="bg-orange-100 p-3 rounded-lg mr-4">
+                  <FileText className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">CASE BRIEFING</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                The case entered into the system is briefed in detail with all the important evidence, facts, key issues, events and accused details with proper description of charges that are put on the accused or respondent. Also tells about the Background and Parties Involved with Timeline of Events and Allegations.
+              </p>
+            </div>
+
+            {/* Case Applicable Acts Extractor */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+              <div className="flex items-center mb-4">
+                <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                  <Scale className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">CASE APPLICABLE ACTS EXTRACTOR</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Based on the Description and Analysis of the case we find all the acts that can be applicable on the case and also provide reason how it can be applicable. It helps to evaluate all perspectives of the case present.
+              </p>
+            </div>
+
+            {/* Sections Assessment */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-green-500">
+              <div className="flex items-center mb-4">
+                <div className="bg-green-100 p-3 rounded-lg mr-4">
+                  <Search className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">SECTIONS ASSESSMENT</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                We assess all the sections present in the act with the given context of the case and tell which sections are applicable or not with the correct applicability or the reason why that particular section is Offensive on the given case.
+              </p>
+            </div>
+
+            {/* Legal Stage Finder */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-purple-500">
+              <div className="flex items-center mb-4">
+                <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                  <MapPin className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">LEGAL STAGE FINDER</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Based on the case context we analyse all the events properly and find at which stage the Case is Present at, What is currently happening in the case.
+              </p>
+            </div>
+
+            {/* Case Way Forward */}
+            <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-indigo-500 md:col-span-2 lg:col-span-1">
+              <div className="flex items-center mb-4">
+                <div className="bg-indigo-100 p-3 rounded-lg mr-4">
+                  <TrendingUp className="w-6 h-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">CASE WAY FORWARD</h3>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Whichever stage is identified above based on that stage we give all the next steps that are necessary for closing the case on behalf of both Complaint and Respondent, what steps both parties can take to close the case and also tells about what potential orders can be given by the court.
+              </p>
+            </div>
           </div>
         </div>
       </section>
