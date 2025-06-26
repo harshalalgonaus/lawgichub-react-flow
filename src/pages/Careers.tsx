@@ -191,7 +191,10 @@ const Careers = () => {
                         </div>
                       </div>
                     </div>
-                    <Button className="mt-4 md:mt-0 bg-legal-accent-brown hover:bg-legal-brown">
+                    <Button 
+                      className="mt-4 md:mt-0 bg-legal-accent-brown hover:bg-legal-brown"
+                      onClick={() => window.location.href = `/job-application?position=${encodeURIComponent(job.title)}`}
+                    >
                       Apply Now
                     </Button>
                   </div>
