@@ -73,7 +73,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="bg-legal-accent-brown/10 p-3 rounded-lg">
                     <Phone className="h-6 w-6 text-legal-accent-brown" />
                   </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                       Support: +1 (555) 123-4568
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4">
                   <div className="bg-legal-accent-brown/10 p-3 rounded-lg">
@@ -99,10 +99,10 @@ const Contact = () => {
                       Visit Us
                     </h3>
                     <p className="text-legal-charcoal">
-                      123 Legal Tech Avenue<br />
-                      Suite 500<br />
-                      San Francisco, CA 94105<br />
-                      United States
+                      Lawgichub AI<br />
+                      Borivali West<br />
+                      1, Dora Rose, IC Colony,<br />
+                      Mumbai, Maharashtra 400103, India
                     </p>
                   </div>
                 </div>

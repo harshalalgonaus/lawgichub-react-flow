@@ -11,9 +11,8 @@ const Careers = () => {
       id: 1,
       title: "Database Engineer",
       department: "Engineering",
-      location: "San Francisco, CA / Remote",
+      location: "Mumbai, Maharashtra, India / Remote",
       type: "Full-time",
-      salary: "$120,000 - $160,000",
       description: "We are seeking a skilled Database Engineer to design, implement, and maintain robust database systems that power our AI-driven legal platform. You'll work with cutting-edge technologies to ensure optimal performance, scalability, and security of our data infrastructure.",
       responsibilities: [
         "Design and optimize database schemas for high-performance legal data processing",
@@ -44,9 +43,8 @@ const Careers = () => {
       id: 2,
       title: "Fullstack Developer",
       department: "Engineering",
-      location: "San Francisco, CA / Remote",
+      location: "Mumbai, Maharashtra, India / Remote",
       type: "Full-time",
-      salary: "$100,000 - $140,000",
       description: "Join our engineering team as a Fullstack Developer to build intuitive, scalable web applications that revolutionize how legal professionals work. You'll contribute to both frontend user experiences and backend API development in our modern tech stack.",
       responsibilities: [
         "Develop responsive web applications using React, TypeScript, and modern frontend frameworks",
@@ -186,8 +184,6 @@ const Careers = () => {
                           <span>{job.type}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <DollarSign className="h-4 w-4" />
-                          <span>{job.salary}</span>
                         </div>
                       </div>
                     </div>
