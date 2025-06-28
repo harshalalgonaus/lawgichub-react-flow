@@ -1,7 +1,7 @@
 
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Scale, CheckCircle, Clock, Shield, ArrowRight, Star } from "lucide-react";
+import { Scale, CheckCircle, Clock, Shield, ArrowRight, Star, Database, FileEdit, Bot, Download, Settings, RefreshCw, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -30,6 +30,99 @@ export default function AiLitigationDrafting() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Drafting Litigation Section */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              LEGAL DRAFTING LITIGATION
+            </h2>
+            <p className="text-lg text-gray-600">
+              Comprehensive AI-powered litigation drafting with intelligent automation
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Case Knowledgebase Harvesting */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Database className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">CASE KNOWLEDGEBASE HARVESTING</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Knowledgebase is Created by the help of LawgicHubAi unique pipeline which creates a unique knowledge base for every case and case file that is provided by the user.
+              </p>
+            </div>
+
+            {/* Context Creation */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <FileEdit className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">CONTEXT CREATION</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                After a Unique Knowledgebase is created then we create the Context Required for creating a Litigation Draft from GroundUp with giving specific instructions if required by the user.
+              </p>
+            </div>
+
+            {/* Agentic Drafting */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <Bot className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">AGENTIC DRAFTING</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Many Context Structures are created in the above step, the best context which compliments the Draft is chosen according to the users requirement by the agent and an Advance LLM trained for Legal Capabilities builds a Draft without structured templates but correct formatting in Legal Based Language.
+              </p>
+            </div>
+
+            {/* Editable Document Delivery */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <Download className="w-6 h-6 text-orange-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">EDITABLE DOCUMENT DELIVERY</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                A Word File Format File can be downloaded from the application that is easily accessible and editable in the system which contains all the needed formatting.
+              </p>
+            </div>
+
+            {/* Adaptive Section Management */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <Settings className="w-6 h-6 text-red-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">ADAPTIVE SECTION MANAGEMENT</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Change or Restructure any given section with new context or add any specific clause or argument or Discovery in the provided section.
+              </p>
+            </div>
+
+            {/* Agentic Section Regeneration */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+                <RefreshCw className="w-6 h-6 text-teal-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">AGENTIC SECTION REGENERATION</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                New Context is created on the new source file for recreating the Section again, Old Context + New Context is used to create a new section with instructions from the lawyer.
+              </p>
+            </div>
+
+            {/* Drafted Document Delivery */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                <FileCheck className="w-6 h-6 text-indigo-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">DRAFTED DOCUMENT DELIVERY</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Final document delivery with all revisions and modifications incorporated into a professionally formatted legal document.
+              </p>
+            </div>
           </div>
         </div>
       </section>

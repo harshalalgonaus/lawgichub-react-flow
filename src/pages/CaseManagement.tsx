@@ -1,7 +1,7 @@
 
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { FileText, CheckCircle, Clock, Shield, ArrowRight, Star } from "lucide-react";
+import { FileText, CheckCircle, Clock, Shield, ArrowRight, Star, Folder, Database, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -30,6 +30,66 @@ export default function CaseManagement() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Multiple Case Handling Section */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              MULTIPLE CASE HANDLING AT ONE PLACE
+            </h2>
+            <p className="text-lg text-gray-600">
+              Comprehensive case management with intelligent automation
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Case Docketing */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <FileText className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">CASE DOCKETING</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Case Initiation or Enrollment in our system with specified and extracted data with the help of Document Ingestion Pipeline which has Advanced Translation Capabilities with Multilingual Extraction.
+              </p>
+            </div>
+
+            {/* Case Manager */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <Database className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">CASE MANAGER</h3>
+              <p className="text-gray-600 leading-relaxed">
+                After the case is Docketed and saved in the Firm's Database, the user can track the cases from the case manager.
+              </p>
+            </div>
+
+            {/* File Manager */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <Folder className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">FILE MANAGER</h3>
+              <p className="text-gray-600 leading-relaxed">
+                File Classification with three types of different files Original Case Files, Processed Files with Case Information, Drafted Files or Files that need to be submitted in court or shown to client.
+              </p>
+            </div>
+
+            {/* Multi Source Extraction */}
+            <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <RefreshCw className="w-6 h-6 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">MULTI SOURCE EXTRACTION</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Extract more Information or contexts into the case if there is new information or file received in the same case to include the new information or to Draft next steps in the proceedings of the case.
+              </p>
+            </div>
           </div>
         </div>
       </section>
