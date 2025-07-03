@@ -3,6 +3,10 @@ import { Scale, Twitter, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-legal-black text-white py-16 px-6">
       <div className="container mx-auto max-w-6xl">
@@ -37,19 +41,19 @@ export const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4 text-legal-accent-brown">Solutions</h4>
+            <h4 className="font-semibold mb-4 text-legal-accent-brown">Practice Areas</h4>
             <ul className="space-y-2 text-legal-light-grey">
               <li>
-                <Link to="/law-firms" className="hover:text-legal-accent-brown transition-colors">Law Firms</Link>
+                <Link to="/law-firms" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Law Firms</Link>
               </li>
               <li>
-                <Link to="/corporate-legal" className="hover:text-legal-accent-brown transition-colors">Corporate Legal</Link>
+                <Link to="/corporate-legal" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Corporate Legal</Link>
               </li>
               <li>
-                <Link to="/solo-practice" className="hover:text-legal-accent-brown transition-colors">Solo Practice</Link>
+                <Link to="/solo-practice" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Solo Practice</Link>
               </li>
               <li>
-                <Link to="/legal-consulting" className="hover:text-legal-accent-brown transition-colors">Legal Consulting</Link>
+                <Link to="/legal-consulting" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Legal Consulting</Link>
               </li>
             </ul>
           </div>
@@ -58,14 +62,14 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4 text-legal-accent-brown">Company</h4>
             <ul className="space-y-2 text-legal-light-grey">
               <li>
-                <Link to="/about" className="hover:text-legal-accent-brown transition-colors">About</Link>
+                <Link to="/about" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">About</Link>
               </li>
               <li>
-                <Link to="/careers" className="hover:text-legal-accent-brown transition-colors">Careers</Link>
+                <Link to="/careers" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Careers</Link>
               </li>
               <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Press</a></li>
               <li>
-                <Link to="/contact" className="hover:text-legal-accent-brown transition-colors">Contact</Link>
+                <Link to="/contact" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
