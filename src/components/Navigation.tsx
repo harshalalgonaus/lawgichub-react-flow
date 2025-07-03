@@ -73,20 +73,20 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-legal-black/95 backdrop-blur-sm border-b border-legal-light-grey/20 z-50 transition-all duration-300">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Now Clickable */}
           <Link 
             to="/"
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
           >
             <img
               src="/lawgichub_icon1.png"
               alt="Lawgichub Logo"
-              className="h-12 w-20 sm:h-16 sm:w-25"
+              className="h-10 w-16 sm:h-12 sm:w-20 md:h-16 md:w-25"
             />
             <div className="flex flex-col leading-tight">
-              <span className="text-xl sm:text-2xl font-bold text-white">LawgicHub AI</span>
+              <span className="text-lg sm:text-xl md:text-2xl font-bold text-white">LawgicHub AI</span>
             </div>
           </Link>
           
@@ -156,10 +156,10 @@ export const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button - Fixed positioning */}
-          <div className="lg:hidden flex items-center">
+          {/* Mobile Menu Button - Properly positioned */}
+          <div className="lg:hidden">
             <button
-              className="text-white hover:text-legal-accent-brown transition-colors duration-200 p-2"
+              className="text-white hover:text-legal-accent-brown transition-colors duration-200 p-1"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
