@@ -32,8 +32,8 @@ export const Hero = () => {
             </Link>
           </div>
 
-          {/* Mobile Disclaimer */}
-          <div className="mb-8 bg-legal-charcoal/30 border border-legal-accent-brown/20 rounded-lg p-4 max-w-2xl mx-auto">
+          {/* Mobile Disclaimer - Only visible on mobile */}
+          <div className="mb-8 bg-legal-charcoal/30 border border-legal-accent-brown/20 rounded-lg p-4 max-w-2xl mx-auto md:hidden">
             <div className="flex items-center justify-center gap-2 mb-2">
               <Smartphone className="h-5 w-5 text-legal-accent-cream" />
               <span className="text-legal-accent-cream font-medium">Mobile Users</span>

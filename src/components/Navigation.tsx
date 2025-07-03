@@ -78,15 +78,15 @@ export const Navigation = () => {
           {/* Logo - Now Clickable */}
           <Link 
             to="/"
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
           >
             <img
               src="/lawgichub_icon1.png"
               alt="Lawgichub Logo"
-              className="h-16 w-25"
+              className="h-12 w-20 sm:h-16 sm:w-25"
             />
             <div className="flex flex-col leading-tight">
-              <span className="text-2xl font-bold text-white">LawgicHub AI</span>
+              <span className="text-xl sm:text-2xl font-bold text-white">LawgicHub AI</span>
             </div>
           </Link>
           
@@ -156,13 +156,15 @@ export const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white hover:text-legal-accent-brown transition-colors duration-200"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile Menu Button - Fixed positioning */}
+          <div className="lg:hidden flex items-center">
+            <button
+              className="text-white hover:text-legal-accent-brown transition-colors duration-200 p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
