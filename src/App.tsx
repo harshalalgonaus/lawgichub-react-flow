@@ -17,6 +17,10 @@ import SmartLegalQuerying from "./pages/SmartLegalQuerying";
 import AiCaseCompanion from "./pages/AiCaseCompanion";
 import LegalAnalysisResearch from "./pages/LegalAnalysisResearch";
 import CompanyVision from "./pages/CompanyVision";
+import LawFirms from "./pages/LawFirms";
+import CorporateLegal from "./pages/CorporateLegal";
+import SoloPractice from "./pages/SoloPractice";
+import LegalConsulting from "./pages/LegalConsulting";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +45,10 @@ const App = () => (
           <Route path="/ai-case-companion" element={<AiCaseCompanion />} />
           <Route path="/legal-analysis-research" element={<LegalAnalysisResearch />} />
           <Route path="/company-vision" element={<CompanyVision />} />
+          <Route path="/law-firms" element={<LawFirms />} />
+          <Route path="/corporate-legal" element={<CorporateLegal />} />
+          <Route path="/solo-practice" element={<SoloPractice />} />
+          <Route path="/legal-consulting" element={<LegalConsulting />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

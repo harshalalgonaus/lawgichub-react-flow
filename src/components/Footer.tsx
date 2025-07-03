@@ -39,10 +39,18 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-legal-accent-brown">Solutions</h4>
             <ul className="space-y-2 text-legal-light-grey">
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Law Firms</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Corporate Legal</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Solo Practice</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Legal Consulting</a></li>
+              <li>
+                <Link to="/law-firms" className="hover:text-legal-accent-brown transition-colors">Law Firms</Link>
+              </li>
+              <li>
+                <Link to="/corporate-legal" className="hover:text-legal-accent-brown transition-colors">Corporate Legal</Link>
+              </li>
+              <li>
+                <Link to="/solo-practice" className="hover:text-legal-accent-brown transition-colors">Solo Practice</Link>
+              </li>
+              <li>
+                <Link to="/legal-consulting" className="hover:text-legal-accent-brown transition-colors">Legal Consulting</Link>
+              </li>
             </ul>
           </div>
           
