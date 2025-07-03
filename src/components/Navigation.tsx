@@ -73,20 +73,20 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-legal-black/95 backdrop-blur-sm border-b border-legal-light-grey/20 z-50 transition-all duration-300">
-      <div className="container mx-auto px-4 sm:px-6 py-4">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Now Clickable */}
           <Link 
             to="/"
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
           >
             <img
               src="/lawgichub_icon1.png"
               alt="Lawgichub Logo"
-              className="h-12 sm:h-16 w-auto"
+              className="h-16 w-25"
             />
             <div className="flex flex-col leading-tight">
-              <span className="text-lg sm:text-2xl font-bold text-white">LawgicHub AI</span>
+              <span className="text-2xl font-bold text-white">LawgicHub AI</span>
             </div>
           </Link>
           
@@ -145,7 +145,7 @@ export const Navigation = () => {
           </div>
 
           {/* Desktop Action Buttons */}
-          <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button variant="ghost" className="text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
               Login
             </Button>
@@ -156,9 +156,9 @@ export const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button - Fixed positioning */}
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white hover:text-legal-accent-brown transition-colors duration-200 flex-shrink-0 p-2"
+            className="lg:hidden text-white hover:text-legal-accent-brown transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
