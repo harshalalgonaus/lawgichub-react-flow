@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Smartphone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -19,23 +20,27 @@ export const Hero = () => {
             Lawgichub delivers AI-powered solutions built for legal professionals—enhancing case management, drafting, research, and legal query resolution with structure, precision, and clarity.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-legal-accent-brown hover:bg-legal-rich-brown text-white px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg"
-            >
-              Book Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            
-            {/* <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-2 border-legal-accent-brown text-legal-accent-brown hover:bg-legal-accent-brown hover:text-white px-8 py-4 text-lg transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Watch Demo
-            </Button> */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Link to="/book-demo">
+              <Button 
+                size="lg" 
+                className="bg-legal-accent-brown hover:bg-legal-rich-brown text-white px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg"
+              >
+                Book Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Mobile Disclaimer */}
+          <div className="mb-8 bg-legal-charcoal/30 border border-legal-accent-brown/20 rounded-lg p-4 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Smartphone className="h-5 w-5 text-legal-accent-cream" />
+              <span className="text-legal-accent-cream font-medium">Mobile Users</span>
+            </div>
+            <p className="text-sm text-legal-light-grey">
+              To experience the future of legal practice, Open the website as a desktop site in your mobile phones.
+            </p>
           </div>
           
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
