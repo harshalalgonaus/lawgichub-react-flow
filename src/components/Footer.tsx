@@ -25,18 +25,31 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <Twitter className="h-5 w-5 text-legal-light-grey hover:text-legal-accent-brown cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-legal-light-grey hover:text-legal-accent-brown cursor-pointer transition-colors" />
+              <a href="https://www.linkedin.com/company/lawgichub-ai" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5 text-legal-light-grey hover:text-legal-accent-brown cursor-pointer transition-colors" />
+              </a>
               <Mail className="h-5 w-5 text-legal-light-grey hover:text-legal-accent-brown cursor-pointer transition-colors" />
             </div>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4 text-legal-accent-brown">Product</h4>
+            <h4 className="font-semibold mb-4 text-legal-accent-brown">Solutions</h4>
             <ul className="space-y-2 text-legal-light-grey">
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Case Management</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Document Automation</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Time Tracking</a></li>
-              <li><a href="#" className="hover:text-legal-accent-brown transition-colors">Client Portal</a></li>
+              <li>
+                <Link to="/case-management" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Case Management</Link>
+              </li>
+              <li>
+                <Link to="/ai-litigation-drafting" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">AI Litigation Drafting</Link>
+              </li>
+              <li>
+                <Link to="/smart-legal-querying" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Smart Legal Querying</Link>
+              </li>
+              <li>
+                <Link to="/ai-case-companion" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">AI Case Companion</Link>
+              </li>
+              <li>
+                <Link to="/legal-analysis-research" onClick={handleLinkClick} className="hover:text-legal-accent-brown transition-colors">Legal Analysis & Research</Link>
+              </li>
             </ul>
           </div>
           
