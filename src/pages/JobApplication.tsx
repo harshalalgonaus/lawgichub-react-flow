@@ -20,7 +20,8 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { useSearchParams, Link } from "react-router-dom";
-import { ArrowLeft, Upload, FileText, User, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowLeft, Upload, FileText, User, Mail, Phone, MapPin, X } from "lucide-react";
+import { useState, useRef } from "react";
 
 const applicationSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -47,6 +48,8 @@ const JobApplication = () => {
   const [searchParams] = useSearchParams();
   const positionParam = searchParams.get("position") || "";
   const { toast } = useToast();
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const form = useForm<ApplicationFormData>({
     resolver: zodResolver(applicationSchema),
@@ -70,13 +73,75 @@ const JobApplication = () => {
     },
   });
 
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (!files) return;
+
+    const validFiles = Array.from(files).filter(file => {
+      const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      const maxSize = 5 * 1024 * 1024; // 5MB
+
+      if (!validTypes.includes(file.type)) {
+        toast({
+          title: "Invalid file type",
+          description: `${file.name} is not a valid file type. Please upload PDF, DOC, or DOCX files.`,
+          variant: "destructive",
+        });
+        return false;
+      }
+
+      if (file.size > maxSize) {
+        toast({
+          title: "File too large",
+          description: `${file.name} is too large. Please upload files smaller than 5MB.`,
+          variant: "destructive",
+        });
+        return false;
+      }
+
+      return true;
+    });
+
+    setUploadedFiles(prev => [...prev, ...validFiles]);
+    
+    if (validFiles.length > 0) {
+      toast({
+        title: "Files uploaded successfully",
+        description: `${validFiles.length} file(s) uploaded.`,
+      });
+    }
+
+    // Reset the input
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  const removeFile = (index: number) => {
+    setUploadedFiles(prev => prev.filter((_, i) => i !== index));
+    toast({
+      title: "File removed",
+      description: "File has been removed from your application.",
+    });
+  };
+
+  const formatFileSize = (bytes: number) => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
   const onSubmit = (data: ApplicationFormData) => {
     console.log("Application submitted:", data);
+    console.log("Uploaded files:", uploadedFiles);
     toast({
       title: "Application Submitted Successfully!",
       description: "We'll review your application and get back to you within 5-7 business days.",
     });
     form.reset();
+    setUploadedFiles([]);
   };
 
   return (
@@ -392,6 +457,7 @@ const JobApplication = () => {
                       <Upload className="h-5 w-5 text-legal-accent-brown" />
                       <span>Resume & Documents</span>
                     </h3>
+                    
                     <div className="border-2 border-dashed border-legal-light-grey rounded-lg p-8 text-center">
                       <Upload className="h-12 w-12 text-legal-charcoal mx-auto mb-4" />
                       <p className="text-legal-charcoal mb-2">
@@ -400,10 +466,51 @@ const JobApplication = () => {
                       <p className="text-sm text-legal-charcoal mb-4">
                         Accepted formats: PDF, DOC, DOCX (Max 5MB each)
                       </p>
-                      <Button type="button" variant="outline" className="border-legal-accent-brown text-legal-accent-brown hover:bg-legal-accent-brown hover:text-white">
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        multiple
+                        accept=".pdf,.doc,.docx"
+                        onChange={handleFileUpload}
+                        className="hidden"
+                        id="file-upload"
+                      />
+                      <Button 
+                        type="button" 
+                        variant="outline" 
+                        className="border-legal-accent-brown text-legal-accent-brown hover:bg-legal-accent-brown hover:text-white"
+                        onClick={() => fileInputRef.current?.click()}
+                      >
                         Choose Files
                       </Button>
                     </div>
+
+                    {/* Display uploaded files */}
+                    {uploadedFiles.length > 0 && (
+                      <div className="space-y-2">
+                        <h4 className="font-medium text-legal-black">Uploaded Files:</h4>
+                        {uploadedFiles.map((file, index) => (
+                          <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div className="flex items-center space-x-3">
+                              <FileText className="h-5 w-5 text-legal-accent-brown" />
+                              <div>
+                                <p className="text-sm font-medium text-legal-black">{file.name}</p>
+                                <p className="text-xs text-legal-charcoal">{formatFileSize(file.size)}</p>
+                              </div>
+                            </div>
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="sm"
+                              onClick={() => removeFile(index)}
+                              className="text-red-500 hover:text-red-700 hover:bg-red-50"
+                            >
+                              <X className="h-4 w-4" />
+                            </Button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* Consent */}
