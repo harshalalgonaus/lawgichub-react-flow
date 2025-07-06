@@ -9,7 +9,7 @@ const Careers = () => {
   const jobOpenings = [
     {
       id: 1,
-      title: "Database Engineer",
+      title: "AI Engineer",
       department: "Engineering",
       location: "Mumbai, Maharashtra, India / Remote",
       type: "Full-time",

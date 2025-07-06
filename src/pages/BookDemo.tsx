@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -7,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Calendar, Clock, Users, Video } from "lucide-react";
+import { Calendar, Clock, Users, Video, CheckCircle, AlertCircle } from "lucide-react";
 
 const BookDemo = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +19,12 @@ const BookDemo = () => {
     message: ""
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -27,10 +32,53 @@ const BookDemo = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Demo booking submitted:", formData);
-    // Handle form submission
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('http://localhost:8000/api/book-demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log("Response status:", response.status);
+      const text = await response.text();
+      console.log("Response body text:", text);
+      const data = JSON.parse(text);
+
+      if (response.ok && data.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message
+        });
+        
+        // Reset form after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          company: "",
+          phone: "",
+          teamSize: "",
+          message: ""
+        });
+      } else {
+        throw new Error(data.detail || 'Failed to submit demo booking');
+      }
+    } catch (error) {
+      console.error('Demo booking error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : 'Failed to submit demo booking. Please try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -138,6 +186,22 @@ const BookDemo = () => {
                   Book Your Demo
                 </h2>
                 
+                {/* Success/Error Message */}
+                {submitStatus.type && (
+                  <div className={`mb-6 p-4 rounded-lg flex items-center space-x-3 ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-50 text-green-800 border border-green-200' 
+                      : 'bg-red-50 text-red-800 border border-red-200'
+                  }`}>
+                    {submitStatus.type === 'success' ? (
+                      <CheckCircle className="h-5 w-5 flex-shrink-0" />
+                    ) : (
+                      <AlertCircle className="h-5 w-5 flex-shrink-0" />
+                    )}
+                    <p className="text-sm">{submitStatus.message}</p>
+                  </div>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -147,6 +211,7 @@ const BookDemo = () => {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
+                        disabled={isSubmitting}
                         required
                       />
                     </div>
@@ -157,6 +222,7 @@ const BookDemo = () => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
+                        disabled={isSubmitting}
                         required
                       />
                     </div>
@@ -170,6 +236,7 @@ const BookDemo = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
+                      disabled={isSubmitting}
                       required
                     />
                   </div>
@@ -181,6 +248,7 @@ const BookDemo = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
+                      disabled={isSubmitting}
                       required
                     />
                   </div>
@@ -193,6 +261,7 @@ const BookDemo = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
+                      disabled={isSubmitting}
                     />
                   </div>
 
@@ -203,7 +272,8 @@ const BookDemo = () => {
                       name="teamSize"
                       value={formData.teamSize}
                       onChange={handleInputChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      disabled={isSubmitting}
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       <option value="">Select team size</option>
                       <option value="1-5">1-5 attorneys</option>
@@ -221,6 +291,7 @@ const BookDemo = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
+                      disabled={isSubmitting}
                       placeholder="What challenges are you looking to solve? Which practice areas are you focused on?"
                       rows={4}
                     />
@@ -228,9 +299,10 @@ const BookDemo = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold py-3"
+                    disabled={isSubmitting}
+                    className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold py-3 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Schedule Demo
+                    {isSubmitting ? 'Scheduling Demo...' : 'Schedule Demo'}
                   </Button>
                 </form>
               </Card>

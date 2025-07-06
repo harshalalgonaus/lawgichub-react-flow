@@ -1,4 +1,3 @@
-
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -44,12 +43,22 @@ const applicationSchema = z.object({
 
 type ApplicationFormData = z.infer<typeof applicationSchema>;
 
+interface ApiResponse {
+  success: boolean;
+  message: string;
+  application_id?: number;
+}
+
 const JobApplication = () => {
   const [searchParams] = useSearchParams();
   const positionParam = searchParams.get("position") || "";
   const { toast } = useToast();
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // API base URL - adjust this based on your backend URL
+  const API_BASE_URL = "http://localhost:8000/api";
 
   const form = useForm<ApplicationFormData>({
     resolver: zodResolver(applicationSchema),
@@ -133,15 +142,82 @@ const JobApplication = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const onSubmit = (data: ApplicationFormData) => {
-    console.log("Application submitted:", data);
-    console.log("Uploaded files:", uploadedFiles);
-    toast({
-      title: "Application Submitted Successfully!",
-      description: "We'll review your application and get back to you within 5-7 business days.",
-    });
-    form.reset();
-    setUploadedFiles([]);
+  const onSubmit = async (data: ApplicationFormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // Create FormData object to match the backend's expected format
+      const formData = new FormData();
+      
+      // Add all form fields
+      formData.append('firstName', data.firstName);
+      formData.append('lastName', data.lastName);
+      formData.append('email', data.email);
+      formData.append('phone', data.phone);
+      formData.append('address', data.address);
+      formData.append('position', data.position);
+      formData.append('experience', data.experience);
+      formData.append('education', data.education);
+      formData.append('skills', data.skills);
+      formData.append('coverLetter', data.coverLetter);
+      formData.append('portfolio', data.portfolio || '');
+      formData.append('linkedin', data.linkedin || '');
+      formData.append('github', data.github || '');
+      formData.append('availability', data.availability);
+      formData.append('salary', data.salary);
+      formData.append('consent', data.consent.toString());
+      
+      // Add files
+      uploadedFiles.forEach((file, index) => {
+        formData.append('files', file);
+      });
+
+      // Submit to backend
+      const response = await fetch(`${API_BASE_URL}/job-application`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => null);
+        throw new Error(errorData?.detail || `HTTP error! status: ${response.status}`);
+      }
+
+      const result: ApiResponse = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Application Submitted Successfully!",
+          description: result.message,
+        });
+        
+        // Reset form and files
+        form.reset();
+        setUploadedFiles([]);
+        
+        // Optionally redirect or show success message
+        console.log("Application ID:", result.application_id);
+      } else {
+        throw new Error(result.message || "Application submission failed");
+      }
+
+    } catch (error) {
+      console.error("Application submission error:", error);
+      
+      let errorMessage = "Failed to submit application. Please try again.";
+      
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      
+      toast({
+        title: "Submission Failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -545,9 +621,9 @@ const JobApplication = () => {
                     <Button 
                       type="submit" 
                       className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white py-3 text-lg"
-                      disabled={form.formState.isSubmitting}
+                      disabled={isSubmitting}
                     >
-                      {form.formState.isSubmitting ? "Submitting..." : "Submit Application"}
+                      {isSubmitting ? "Submitting..." : "Submit Application"}
                     </Button>
                   </div>
                 </form>
