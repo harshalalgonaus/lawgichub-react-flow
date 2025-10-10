@@ -146,9 +146,11 @@ export const Navigation = () => {
 
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="ghost" className="text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
-              Login
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" className="text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
+                Login
+              </Button>
+            </Link>
             <Link to="/book-demo">
               <Button className="bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105">
                 Book Demo
@@ -220,9 +222,11 @@ export const Navigation = () => {
               
               {/* Mobile Action Buttons */}
               <div className="space-y-2 pt-4 border-t border-legal-light-grey/20">
-                <Button variant="ghost" className="w-full text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
-                  Login
-                </Button>
+                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full text-white hover:bg-legal-accent-brown/10 hover:text-legal-accent-brown transition-all duration-200">
+                    Login
+                  </Button>
+                </Link>
                 <Link to="/book-demo" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200">
                     Book Demo

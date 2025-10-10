@@ -22,6 +22,8 @@ import CorporateLegal from "./pages/CorporateLegal";
 import SoloPractice from "./pages/SoloPractice";
 import LegalConsulting from "./pages/LegalConsulting";
 import NotFound from "./pages/NotFound";
+import { Login } from "./pages/Login";
+import { Signup } from "./pages/Signup";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/corporate-legal" element={<CorporateLegal />} />
           <Route path="/solo-practice" element={<SoloPractice />} />
           <Route path="/legal-consulting" element={<LegalConsulting />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
