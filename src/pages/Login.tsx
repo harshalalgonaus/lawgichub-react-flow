@@ -86,91 +86,81 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-legal-cream via-white to-legal-light-grey">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="h-16"></div> {/* Empty space for navigation bar */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-md mx-auto">
-          <div className="text-center mb-8">
-            <div className="flex justify-center mb-4">
-              {/* <img
-                src="/lawgichub_icon1.png"
-                alt="LawgicHub AI"
-                className="h-16 w-24 object-contain"
-              /> */}
-            </div>
-            <h1 className="text-3xl font-bold text-legal-black mb-2">
+      <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-12">
+        <div className="w-full max-w-md space-y-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-legal-black mb-3">
               Welcome Back
             </h1>
-            <p className="text-lg text-legal-brown">
-              Sign in to your LawgicHub AI account
+            <p className="text-legal-grey">
+              Sign in to access your LawgicHub AI account
             </p>
           </div>
 
-          <Card className="border-legal-light-grey shadow-xl">
-            <CardHeader className="text-center space-y-2">
-              <CardTitle className="text-2xl font-bold text-legal-black">
+          <Card className="border-legal-light-grey shadow-2xl">
+            <CardHeader className="space-y-1 pb-6">
+              <CardTitle className="text-2xl font-bold text-legal-black text-center">
                 Sign In
               </CardTitle>
-              <CardDescription className="text-legal-grey">
-                Enter your credentials to access your account
-              </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <div className="space-y-2">
                   <Label htmlFor="firmName" className="text-legal-black font-medium">
                     Firm Name
                   </Label>
                   <div className="relative">
-                    <Building className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                    <Building className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                     <Input
                       id="firmName"
                       type="text"
-                      placeholder="Firm Name"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                      placeholder="Enter firm name"
+                      className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                       {...register("firmName")}
                     />
                   </div>
                   {errors.firmName && (
-                    <p className="text-sm text-red-600">{errors.firmName.message}</p>
+                    <p className="text-sm text-destructive">{errors.firmName.message}</p>
                   )}
                 </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="userName" className="text-legal-black font-medium">
                     User Name
                   </Label>
                   <div className="relative">
-                    <CircleUserRound className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                    <CircleUserRound className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                     <Input
                       id="userName"
                       type="text"
-                      placeholder="User Name"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                      placeholder="Enter username"
+                      className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                       {...register("userName")}
                     />
                   </div>
                   {errors.userName && (
-                    <p className="text-sm text-red-600">{errors.userName.message}</p>
+                    <p className="text-sm text-destructive">{errors.userName.message}</p>
                   )}
-                </div>    
+                </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="password" className="text-legal-black font-medium">
                     Password
                   </Label>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                    <Lock className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                     <Input
                       id="password"
                       type="password"
                       placeholder="Enter your password"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                      className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                       {...register("password")}
                     />
                   </div>
                   {errors.password && (
-                    <p className="text-sm text-red-600">{errors.password.message}</p>
+                    <p className="text-sm text-destructive">{errors.password.message}</p>
                   )}
                 </div>
 
@@ -180,13 +170,13 @@ export const Login = () => {
                       id="rememberMe"
                       {...register("rememberMe")}
                     />
-                    <Label htmlFor="rememberMe" className="text-sm text-legal-grey">
+                    <Label htmlFor="rememberMe" className="text-sm text-legal-grey cursor-pointer">
                       Remember me
                     </Label>
                   </div>
                   <Link
                     to="/forgot-password"
-                    className="text-sm text-legal-accent-brown hover:text-legal-brown transition-colors"
+                    className="text-sm text-legal-accent-brown hover:text-legal-rich-brown transition-colors font-medium"
                   >
                     Forgot password?
                   </Link>
@@ -195,21 +185,29 @@ export const Login = () => {
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105"
+                  className="w-full h-11 bg-legal-accent-brown hover:bg-legal-rich-brown text-white font-semibold transition-all duration-200"
                 >
                   {isLoading ? "Signing In..." : "Sign In"}
                 </Button>
 
+                <div className="relative my-6">
+                  <div className="absolute inset-0 flex items-center">
+                    <span className="w-full border-t border-legal-light-grey" />
+                  </div>
+                  <div className="relative flex justify-center text-xs uppercase">
+                    <span className="bg-card px-2 text-legal-grey">
+                      New to LawgicHub?
+                    </span>
+                  </div>
+                </div>
+
                 <div className="text-center">
-                  <p className="text-sm text-legal-grey">
-                    Don't have an account?{" "}
-                    <Link
-                      to="/signup"
-                      className="text-legal-accent-brown hover:text-legal-brown transition-colors font-medium"
-                    >
-                      Sign up here
-                    </Link>
-                  </p>
+                  <Link
+                    to="/signup"
+                    className="text-legal-accent-brown hover:text-legal-rich-brown transition-colors font-medium"
+                  >
+                    Create an account →
+                  </Link>
                 </div>
               </form>
             </CardContent>

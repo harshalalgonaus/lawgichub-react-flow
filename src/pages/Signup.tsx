@@ -89,73 +89,63 @@ export const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-legal-cream via-white to-legal-light-grey">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="h-16"></div> {/* Empty space for navigation bar */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="flex justify-center mb-4">
-              {/* <img
-                src="/lawgichub_icon1.png"
-                alt="LawgicHub AI"
-                className="h-16 w-24 object-contain"
-              /> */}
-            </div>
-            <h1 className="text-3xl font-bold text-legal-black mb-2">
+      <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-12">
+        <div className="w-full max-w-2xl space-y-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-legal-black mb-3">
               Create Your Account
             </h1>
-            <p className="text-lg text-legal-brown">
-              Join LawgicHub AI and revolutionize your legal practice
+            <p className="text-legal-grey">
+              Join LawgicHub AI and transform your legal practice
             </p>
           </div>
 
-          <Card className="border-legal-light-grey shadow-xl">
-            <CardHeader className="text-center space-y-2">
-              <CardTitle className="text-2xl font-bold text-legal-black">
+          <Card className="border-legal-light-grey shadow-2xl">
+            <CardHeader className="space-y-1 pb-6">
+              <CardTitle className="text-2xl font-bold text-legal-black text-center">
                 Sign Up
               </CardTitle>
-              <CardDescription className="text-legal-grey">
-                Fill in the details below to create your LawgicHub AI account
-              </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                   <div className="space-y-2">
-                    <Label htmlFor="firmName" className="text-legal-black font-medium">
-                      Firm Name
-                    </Label>
-                    <div className="relative">
-                      <Building className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
-                      <Input
-                        id="firmName"
-                        type="text"
-                        placeholder="Firm Name"
-                        className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
-                        {...register("firmName")}
-                      />
-                    </div>
-                    {errors.firmName && (
-                      <p className="text-sm text-red-600">{errors.firmName.message}</p>
-                    )}
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                <div className="space-y-2">
+                  <Label htmlFor="firmName" className="text-legal-black font-medium">
+                    Firm Name
+                  </Label>
+                  <div className="relative">
+                    <Building className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
+                    <Input
+                      id="firmName"
+                      type="text"
+                      placeholder="Enter firm name"
+                      className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
+                      {...register("firmName")}
+                    />
                   </div>
+                  {errors.firmName && (
+                    <p className="text-sm text-destructive">{errors.firmName.message}</p>
+                  )}
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="firstName" className="text-legal-black font-medium">
                       First Name
                     </Label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                      <User className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                       <Input
                         id="firstName"
                         type="text"
                         placeholder="John"
-                        className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                        className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                         {...register("firstName")}
                       />
                     </div>
                     {errors.firstName && (
-                      <p className="text-sm text-red-600">{errors.firstName.message}</p>
+                      <p className="text-sm text-destructive">{errors.firstName.message}</p>
                     )}
                   </div>
 
@@ -164,17 +154,17 @@ export const Signup = () => {
                       Last Name
                     </Label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                      <User className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                       <Input
                         id="lastName"
                         type="text"
                         placeholder="Doe"
-                        className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                        className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                         {...register("lastName")}
                       />
                     </div>
                     {errors.lastName && (
-                      <p className="text-sm text-red-600">{errors.lastName.message}</p>
+                      <p className="text-sm text-destructive">{errors.lastName.message}</p>
                     )}
                   </div>
                 </div>
@@ -184,150 +174,130 @@ export const Signup = () => {
                     User Name
                   </Label>
                   <div className="relative">
-                    <CircleUserRound className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                    <CircleUserRound className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                     <Input
                       id="userName"
                       type="text"
-                      placeholder="User Name"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                      placeholder="Choose a username"
+                      className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                       {...register("userName")}
                     />
                   </div>
                   {errors.userName && (
-                    <p className="text-sm text-red-600">{errors.userName.message}</p>
+                    <p className="text-sm text-destructive">{errors.userName.message}</p>
                   )}
-                </div>    
+                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-legal-black font-medium">
                     Email Address
                   </Label>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
+                    <Mail className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
                     <Input
                       id="email"
                       type="email"
                       placeholder="your.email@example.com"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
+                      className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
                       {...register("email")}
                     />
                   </div>
                   {errors.email && (
-                    <p className="text-sm text-red-600">{errors.email.message}</p>
+                    <p className="text-sm text-destructive">{errors.email.message}</p>
                   )}
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="password" className="text-legal-black font-medium">
-                    Password
-                  </Label>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
-                    <Input
-                      id="password"
-                      type="password"
-                      placeholder="Create a password"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
-                      {...register("password")}
-                    />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="password" className="text-legal-black font-medium">
+                      Password
+                    </Label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
+                      <Input
+                        id="password"
+                        type="password"
+                        placeholder="Create a password"
+                        className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
+                        {...register("password")}
+                      />
+                    </div>
+                    {errors.password && (
+                      <p className="text-sm text-destructive">{errors.password.message}</p>
+                    )}
                   </div>
-                  {errors.password && (
-                    <p className="text-sm text-red-600">{errors.password.message}</p>
-                  )}
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="confirmPassword" className="text-legal-black font-medium">
-                    Confirm Password
-                  </Label>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 h-4 w-4 text-legal-grey -translate-y-1/2" />
-                    <Input
-                      id="confirmPassword"
-                      type="password"
-                      placeholder="Confirm your password"
-                      className="pl-10 border-legal-light-grey focus:border-legal-accent-brown"
-                      {...register("confirmPassword")}
-                    />
+                  <div className="space-y-2">
+                    <Label htmlFor="confirmPassword" className="text-legal-black font-medium">
+                      Confirm Password
+                    </Label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 h-5 w-5 text-legal-grey -translate-y-1/2" />
+                      <Input
+                        id="confirmPassword"
+                        type="password"
+                        placeholder="Confirm password"
+                        className="pl-11 h-11 border-legal-light-grey focus:border-legal-accent-brown focus:ring-legal-accent-brown"
+                        {...register("confirmPassword")}
+                      />
+                    </div>
+                    {errors.confirmPassword && (
+                      <p className="text-sm text-destructive">{errors.confirmPassword.message}</p>
+                    )}
                   </div>
-                  {errors.confirmPassword && (
-                    <p className="text-sm text-red-600">{errors.confirmPassword.message}</p>
-                  )}
                 </div>
 
-                <div className="flex items-start space-x-2">
+                <div className="flex items-start space-x-2 pt-2">
                   <Checkbox
                     id="agreeToTerms"
                     {...register("agreeToTerms")}
+                    className="mt-1"
                   />
-                  <Label htmlFor="agreeToTerms" className="text-sm text-legal-grey leading-normal">
+                  <Label htmlFor="agreeToTerms" className="text-sm text-legal-grey leading-relaxed cursor-pointer">
                     I agree to the{" "}
-                    <Link to="/terms" className="text-legal-accent-brown hover:text-legal-brown transition-colors">
+                    <Link to="/terms" className="text-legal-accent-brown hover:text-legal-rich-brown transition-colors font-medium">
                       Terms of Service
                     </Link>{" "}
                     and{" "}
-                    <Link to="/privacy" className="text-legal-accent-brown hover:text-legal-brown transition-colors">
+                    <Link to="/privacy" className="text-legal-accent-brown hover:text-legal-rich-brown transition-colors font-medium">
                       Privacy Policy
                     </Link>
                   </Label>
                 </div>
                 {errors.agreeToTerms && (
-                  <p className="text-sm text-red-600">{errors.agreeToTerms.message}</p>
+                  <p className="text-sm text-destructive">{errors.agreeToTerms.message}</p>
                 )}
 
                 <Button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-legal-accent-brown hover:bg-legal-brown text-white font-semibold transition-all duration-200 transform hover:scale-105"
+                  className="w-full h-11 bg-legal-accent-brown hover:bg-legal-rich-brown text-white font-semibold transition-all duration-200"
                 >
                   {isLoading ? "Creating Account..." : "Create Account"}
                 </Button>
 
+                <div className="relative my-6">
+                  <div className="absolute inset-0 flex items-center">
+                    <span className="w-full border-t border-legal-light-grey" />
+                  </div>
+                  <div className="relative flex justify-center text-xs uppercase">
+                    <span className="bg-card px-2 text-legal-grey">
+                      Already have an account?
+                    </span>
+                  </div>
+                </div>
+
                 <div className="text-center">
-                  <p className="text-sm text-legal-grey">
-                    Already have an account?{" "}
-                    <Link
-                      to="/login"
-                      className="text-legal-accent-brown hover:text-legal-brown transition-colors font-medium"
-                    >
-                      Sign in here
-                    </Link>
-                  </p>
+                  <Link
+                    to="/login"
+                    className="text-legal-accent-brown hover:text-legal-rich-brown transition-colors font-medium"
+                  >
+                    Sign in instead →
+                  </Link>
                 </div>
               </form>
             </CardContent>
           </Card>
-
-          <div className="mt-8 text-center">
-            <div className="flex justify-center mb-4">
-              <Scale className="h-8 w-8 text-legal-accent-brown" />
-            </div>
-            <h3 className="text-lg font-semibold text-legal-black mb-2">
-              Why Choose LawgicHub AI?
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-              <div className="text-center">
-                <div className="bg-legal-accent-brown/10 p-3 rounded-lg w-12 h-12 mx-auto mb-2 flex items-center justify-center">
-                  <Scale className="h-6 w-6 text-legal-accent-brown" />
-                </div>
-                <h4 className="font-medium text-legal-black mb-1">AI-Powered</h4>
-                <p className="text-sm text-legal-grey">Advanced legal AI tools</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-legal-accent-brown/10 p-3 rounded-lg w-12 h-12 mx-auto mb-2 flex items-center justify-center">
-                  <User className="h-6 w-6 text-legal-accent-brown" />
-                </div>
-                <h4 className="font-medium text-legal-black mb-1">Secure</h4>
-                <p className="text-sm text-legal-grey">Enterprise-grade security</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-legal-accent-brown/10 p-3 rounded-lg w-12 h-12 mx-auto mb-2 flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-legal-accent-brown" />
-                </div>
-                <h4 className="font-medium text-legal-black mb-1">Support</h4>
-                <p className="text-sm text-legal-grey">24/7 expert support</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
