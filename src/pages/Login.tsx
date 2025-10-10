@@ -86,9 +86,9 @@ export const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
-      <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-12">
+      <div className="flex items-center justify-center px-4 py-8 md:py-12">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-legal-black mb-3">
