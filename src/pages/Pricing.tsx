@@ -148,7 +148,7 @@ const Pricing = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-legal-black px-8 py-3">
+              <Button variant="outline" className="border-white text-black hover:bg-white-400 hover:text-legal-black px-8 py-3">
                 Contact Sales
               </Button>
             </Link>

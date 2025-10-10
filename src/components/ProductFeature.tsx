@@ -12,7 +12,7 @@ const featureImages = [
   {
     src: "case_management.jpeg",
     alt: "Legal Practice Management Dashboard",
-    caption: "Case Management"
+    caption: "Case Analysis"
   },
   {
     src: "exhibit.jpeg",
@@ -93,7 +93,7 @@ export const ProductFeature = () => {
           <div className="p-4 md:p-8">
             <div className="text-center mb-6 md:mb-8">
               <h3 className="text-xl md:text-2xl font-semibold text-legal-charcoal mb-3 md:mb-4">
-               Case Processing
+               Case Assesment
               </h3>
               <p className="text-legal-grey text-base md:text-lg px-4">
                 Automate document intake, sorting, and contextual linking to streamline case workflows and reduce manual effort at every stage.
@@ -108,7 +108,7 @@ export const ProductFeature = () => {
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-auto object-contain object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0"></div>
                       <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4">

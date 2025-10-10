@@ -83,7 +83,7 @@ export const Navigation = () => {
             <img
               src="/lawgichub_icon1.png"
               alt="Lawgichub Logo"
-              className="h-10 w-16 sm:h-12 sm:w-20 md:h-16 md:w-25"
+              className="h-15 w-12 sm:h-12 sm:w-20 md:h-15 md:w-12"
             />
             <div className="flex flex-col leading-tight">
               <span className="text-lg sm:text-xl md:text-2xl font-bold text-white">LawgicHub AI</span>

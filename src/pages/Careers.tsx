@@ -9,67 +9,105 @@ const Careers = () => {
   const jobOpenings = [
     {
       id: 1,
-      title: "AI Engineer",
-      department: "Engineering",
-      location: "Mumbai, Maharashtra, India / Remote",
+      title: "Data Platform Manager",
+      department: "Core Team",
+      location: "Mumbai / Bengaluru (Hybrid)",
       type: "Full-time",
-      description: "We are seeking a skilled Database Engineer to design, implement, and maintain robust database systems that power our AI-driven legal platform. You'll work with cutting-edge technologies to ensure optimal performance, scalability, and security of our data infrastructure.",
+      experience: "2-3 years",
+      description: "Own and manage our end-to-end data platform, enabling clean, structured, and queryable legal data pipelines that fuel AI-driven features like case reasoning, legal search, and predictive analytics.",
       responsibilities: [
-        "Design and optimize database schemas for high-performance legal data processing",
-        "Implement data migration strategies and backup/recovery procedures",
-        "Monitor database performance and troubleshoot complex queries",
-        "Collaborate with AI/ML teams to optimize data pipelines for legal analytics",
-        "Ensure compliance with legal industry data security standards",
-        "Manage database clusters and implement automated scaling solutions"
+        "Design and maintain data ingestion, cleaning, and transformation pipelines for multi-source legal datasets (judgments, acts, filings, etc.)",
+        "Manage and optimize data warehousing and indexing systems (PostgreSQL, ElasticSearch, BigQuery, etc.)",
+        "Implement data versioning, lineage tracking, and schema governance across structured and unstructured data sources",
+        "Collaborate with AI engineers to feed training data pipelines for NLP and reasoning models",
+        "Develop internal APIs and microservices for data access and analytics",
+        "Ensure security, compliance, and confidentiality in handling sensitive legal data (especially per Indian law)",
+        "Work closely with backend and AI teams to deliver real-time query systems and data dashboards"
       ],
       requirements: [
-        "5+ years of experience with PostgreSQL, MySQL, or similar RDBMS",
-        "Strong experience with NoSQL databases (MongoDB, Redis, Elasticsearch)",
-        "Proficiency in SQL optimization and database performance tuning",
-        "Experience with cloud database services (AWS RDS, Google Cloud SQL)",
-        "Knowledge of data warehousing concepts and ETL processes",
-        "Familiarity with database security best practices and compliance standards",
-        "Bachelor's degree in Computer Science or related field"
+        "2-3 years of experience in data engineering or platform management",
+        "Strong in SQL/NoSQL, Python, and data orchestration tools (Airflow, Prefect, Dagster)",
+        "Experience with data pipelines, ETL, and API integrations",
+        "Familiarity with AWS/GCP data stack (S3, Redshift, BigQuery, Lambda)",
+        "Basic understanding of data security, encryption, and access control policies",
+        "Bonus: Exposure to legal datasets, NLP preprocessing, or vector databases (Pinecone, FAISS, Milvus)"
       ],
       benefits: [
-        "Competitive salary and equity package",
-        "Comprehensive health, dental, and vision insurance",
-        "Flexible work arrangements and remote-friendly culture",
-        "Professional development budget and conference attendance",
-        "401(k) with company matching"
+        "Be part of India's first full-stack AI Legal Infrastructure Platform",
+        "Work with a core founding team blending AI, law, and data science",
+        "Hybrid flexibility + rapid ownership in early-stage product scaling",
+        "Early-stage ESOP potential",
+        "Build systems that redefine how legal work is automated in India"
       ]
     },
     {
       id: 2,
-      title: "Fullstack Developer",
-      department: "Engineering",
-      location: "Mumbai, Maharashtra, India / Remote",
+      title: "Backend Infrastructure Engineer",
+      department: "Core Team",
+      location: "Mumbai / Bengaluru (Hybrid)",
       type: "Full-time",
-      description: "Join our engineering team as a Fullstack Developer to build intuitive, scalable web applications that revolutionize how legal professionals work. You'll contribute to both frontend user experiences and backend API development in our modern tech stack.",
+      experience: "2-3 years",
+      description: "Build the backend infrastructure and microservices that power our AI reasoning engines, legal workflow automation, and data exchange systems. This role sits at the intersection of system design, cloud architecture, and AI integration.",
       responsibilities: [
-        "Develop responsive web applications using React, TypeScript, and modern frontend frameworks",
-        "Build and maintain RESTful APIs using Node.js and Express",
-        "Collaborate with UX/UI designers to implement pixel-perfect interfaces",
-        "Integrate with AI/ML services and third-party legal APIs",
-        "Write comprehensive tests and maintain high code quality standards",
-        "Participate in code reviews and technical architecture discussions"
+        "Design and develop scalable backend systems supporting AI-based document reasoning and case processing",
+        "Build RESTful and GraphQL APIs to connect front-end apps, data services, and AI models",
+        "Architect and maintain microservice-based systems with robust fault tolerance and monitoring",
+        "Implement auth layers, rate limiting, and API gateways for secure multi-tenant operations",
+        "Optimize inference serving for LLMs and reasoning pipelines using async workers / caching layers",
+        "Collaborate with DevOps for CI/CD, containerization (Docker, Kubernetes), and load balancing",
+        "Work closely with Data Platform and AI teams for tight integration of backend and data workflows"
       ],
       requirements: [
-        "3+ years of experience in fullstack web development",
-        "Strong proficiency in React, TypeScript, and modern JavaScript",
-        "Experience with Node.js, Express, and RESTful API development",
-        "Familiarity with database technologies (PostgreSQL, MongoDB)",
-        "Knowledge of cloud platforms (AWS, GCP) and containerization (Docker)",
-        "Understanding of agile development methodologies",
-        "Bachelor's degree in Computer Science or equivalent experience"
+        "2-3 years of experience in backend development and infrastructure",
+        "Strong in Python / Node.js / Go (Python preferred)",
+        "Solid understanding of FastAPI, Django, or Flask frameworks",
+        "Experience with microservices, Docker, Kubernetes, and cloud deployment (AWS/GCP)",
+        "Proficiency in API design, scaling, and system monitoring (Grafana, Prometheus)",
+        "Knowledge of message brokers (RabbitMQ, Kafka)",
+        "Bonus: Exposure to AI model integration (LangChain, OpenAI, Hugging Face)"
       ],
       benefits: [
-        "Competitive salary and equity package",
-        "Comprehensive health, dental, and vision insurance",
-        "Flexible work arrangements and remote-friendly culture",
-        "Latest development tools and hardware",
-        "Learning and development opportunities",
-        "401(k) with company matching"
+        "Work on real-world AI infrastructure challenges in LegalTech",
+        "Join a founding-level engineering team building scalable, intelligent systems",
+        "Hybrid flexibility, high ownership, and early ESOP potential",
+        "Contribute to an ecosystem reshaping how justice and automation converge"
+      ]
+    },
+    {
+      id: 3,
+      title: "Full Stack Developer",
+      department: "Core Team",
+      location: "Mumbai / Bengaluru (Hybrid)",
+      type: "Full-time",
+      experience: "2-3 years",
+      description: "Build the front-to-back experience that makes LawgicHub AI the most advanced legal assistant and automation engine. Own features end-to-end — from designing intuitive UI components to building high-performance backend APIs and databases.",
+      responsibilities: [
+        "Design, build, and maintain scalable web applications with clean and reusable codebases",
+        "Develop RESTful / GraphQL APIs and integrate them with backend microservices",
+        "Implement frontend interfaces for AI-driven workflows (case builder, document drafts, argument simulator, etc.)",
+        "Work on authentication, authorization, and secure data flow across modules",
+        "Optimize performance and ensure responsive UI/UX across devices",
+        "Collaborate with the design team for component-based architectures using React + Tailwind / Next.js",
+        "Integrate AI endpoints (LLMs, reasoning modules, embeddings) for real-time features",
+        "Participate in code reviews, CI/CD setup, and cloud deployments (AWS / GCP / Render / Vercel)",
+        "Ensure system reliability, scalability, and fault tolerance"
+      ],
+      requirements: [
+        "2-3 years of experience in full stack web development",
+        "Strong in JavaScript / TypeScript, React / Next.js, and Python (FastAPI / Django)",
+        "Solid understanding of REST APIs, PostgreSQL / MongoDB, and data modeling",
+        "Experience with state management (Redux / Zustand) and component design",
+        "Proficiency in Docker, Git, and CI/CD pipelines",
+        "Experience in secure authentication (JWT / OAuth2)",
+        "Familiarity with AI or SaaS product integrations is a plus",
+        "Bonus: Knowledge of LangChain, OpenAI API, or prompt engineering"
+      ],
+      benefits: [
+        "Be part of a founding engineering team shaping LegalTech AI in India",
+        "Work on cutting-edge AI + SaaS integrations that redefine how legal work is done",
+        "Hybrid flexibility, early-stage ESOP potential, and strong ownership",
+        "Collaborate with experts from law, AI, and finance domains",
+        "Build technology that will digitally empower the justice ecosystem"
       ]
     }
   ];

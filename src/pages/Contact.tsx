@@ -143,9 +143,9 @@ const Contact = () => {
                     </h3>
                     <p className="text-legal-charcoal">
                       Lawgichub AI<br />
-                      Borivali West<br />
-                      1, Dora Rose, IC Colony,<br />
-                      Mumbai, Maharashtra 400103, India
+                      Mumbai, Govandi (East)<br />
+                      B 113, Plot No 231,Arjun Centre,<br />
+                      Mumbai, Maharashtra 400088, India
                     </p>
                   </div>
                 </div>
