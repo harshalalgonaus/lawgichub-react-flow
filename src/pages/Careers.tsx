@@ -4,11 +4,52 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Clock, Users, Briefcase, DollarSign, Mail } from "lucide-react";
+import exp from "constants";
 
 const Careers = () => {
   const jobOpenings = [
     {
-      id: 1,
+  id: 1,
+  title: "Talent Acquisition Manager (HR)",
+  department: "Core Team",
+  location: "Mumbai / Bengaluru (Hybrid)",
+  type: "Full-time",
+  experience: "2-3 years",
+  description: "Lead end-to-end recruitment and people operations for LawgicHub AI — India’s first AI Legal Infrastructure Platform. As part of the founding HR team, you’ll design and execute talent strategies, build the employer brand, and shape the culture that powers our AI-driven legal innovation.",
+  responsibilities: [
+    "Design and execute end-to-end recruitment strategies across engineering, product, legal, and operations roles",
+    "Partner with founders and team leads to forecast hiring needs and define role requirements",
+    "Source, screen, and evaluate candidates through LinkedIn, AngelList, GitHub, and other tech communities",
+    "Build and maintain strong talent pipelines for AI, data, and SaaS roles",
+    "Ensure an exceptional candidate experience from outreach to onboarding",
+    "Drive employer branding initiatives across LinkedIn and hiring platforms",
+    "Manage offer rollouts, negotiations, and onboarding processes",
+    "Maintain HR documentation, systems, and compliance workflows",
+    "Support company culture initiatives, retention programs, and performance frameworks"
+  ],
+  requirements: [
+    "2–3 years of experience in Talent Acquisition or HR, preferably in a startup or tech environment",
+    "Proven success in hiring for tech roles (AI / SaaS / Engineering / Product)",
+    "Strong familiarity with modern recruitment tools (LinkedIn Recruiter, Naukri, AngelList, etc.)",
+    "Excellent communication, stakeholder management, and negotiation skills",
+    "Ability to assess both skill and cultural fit in startup environments",
+    "Experience in employer branding and candidate engagement programs",
+    "Bonus: Familiarity with AI, LegalTech, or technology domain hiring"
+  ],
+  benefits: [
+    "Be part of the core founding team shaping one of India’s most ambitious AI startups",
+    "Work directly with visionary founders and cross-domain experts in AI, law, and product",
+    "Hybrid flexibility — remote collaboration with periodic onsite engagement",
+    "Fast growth and early leadership opportunity in HR",
+    "High ownership, impact, and potential early-stage ESOPs",
+    "Help define the culture driving the future of AI-driven legal ecosystems"
+  ]
+
+
+
+    },
+    {
+      id: 2,
       title: "Data Platform Manager",
       department: "Core Team",
       location: "Mumbai / Bengaluru (Hybrid)",
@@ -41,7 +82,7 @@ const Careers = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Backend Infrastructure Engineer",
       department: "Core Team",
       location: "Mumbai / Bengaluru (Hybrid)",
@@ -74,7 +115,7 @@ const Careers = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Full Stack Developer",
       department: "Core Team",
       location: "Mumbai / Bengaluru (Hybrid)",
