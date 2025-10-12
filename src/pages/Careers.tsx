@@ -49,7 +49,46 @@ const Careers = () => {
 
     },
     {
-      id: 2,
+  "id": 2,
+  "title": "Social Media & Brand Marketing Head",
+  "department": "Core Team",
+  "location": "Mumbai / Bengaluru (Hybrid)",
+  "type": "Full-time",
+  "experience": "3-6 years",
+  "description": "Lead the digital identity and brand presence of LawgicHub AI — India's first AI Legal Infrastructure Platform. As a strategic marketing leader, you'll define how India perceives the future of legal automation through compelling storytelling, B2B marketing, and thought leadership across all major digital channels.",
+  "responsibilities": [
+    "Build and execute comprehensive social media strategy to grow LawgicHub AI's brand across LinkedIn, Instagram, X, YouTube, and emerging platforms",
+    "Manage content strategy, brand storytelling, and digital positioning aligned with company vision and product milestones",
+    "Create and oversee campaigns for product launches, thought leadership content, founder interviews, and community engagement",
+    "Work directly with founders to craft narratives highlighting innovation in LegalTech and AI",
+    "Leverage LinkedIn network and industry connections to arrange interviews, press coverage, and influencer collaborations",
+    "Establish partnerships with legal and AI marketing agencies for amplified reach",
+    "Coordinate with design and video teams to produce high-quality visual content, reels, case studies, and product explainers",
+    "Track analytics across all platforms and measure reach, engagement, lead generation, and conversion impact",
+    "Build and manage relationships with external PR, media, and marketing agencies",
+    "Strategically grow founder and brand LinkedIn profiles for credibility and industry influence"
+  ],
+  "requirements": [
+    "3–6 years of experience in Social Media Management, Digital Marketing, or Brand Strategy, preferably for B2B SaaS, AI, or Tech brands",
+    "Proven success in managing and growing LinkedIn pages and B2B brand visibility",
+    "Hands-on experience with content strategy, influencer outreach, and performance marketing tools",
+    "Deep understanding of LinkedIn algorithms, growth strategies, and engagement-building techniques",
+    "Excellent writing, storytelling, and communication skills",
+    "Strong industry connections for marketing collaborations, PR agencies, and media interviews",
+    "Experience with marketing analytics, SEO basics, and digital reporting tools (Google Analytics, HubSpot, Hootsuite, Buffer, etc.)",
+    "Bonus: Experience promoting AI or LegalTech products or working in startup ecosystems"
+  ],
+  "benefits": [
+    "Lead brand and communication strategy for one of India's fastest-growing LegalTech AI startups",
+    "Work directly with visionary founders and AI product teams shaping the future of law",
+    "Hybrid work model with flexibility and in-person collaboration in Mumbai/Bengaluru",
+    "High ownership role with rapid leadership growth opportunities and ESOP potential",
+    "Be the voice that defines how India sees AI transforming the legal world",
+    "Fast-paced startup environment with direct founder collaboration and strategic impact"
+  ]
+},
+    {
+      id: 3,
       title: "Data Platform Manager",
       department: "Core Team",
       location: "Mumbai / Bengaluru (Hybrid)",
@@ -82,7 +121,7 @@ const Careers = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Backend Infrastructure Engineer",
       department: "Core Team",
       location: "Mumbai / Bengaluru (Hybrid)",
@@ -115,7 +154,7 @@ const Careers = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Full Stack Developer",
       department: "Core Team",
       location: "Mumbai / Bengaluru (Hybrid)",
@@ -324,7 +363,7 @@ const Careers = () => {
                       </p>
                       <div className="flex items-center space-x-2 text-legal-accent-brown">
                         <Mail className="h-4 w-4" />
-                        <span>careers@lawgichub.com</span>
+                        <span>lawgichub@aiomnivergesolutions.com</span>
                       </div>
                     </div>
                   </div>
