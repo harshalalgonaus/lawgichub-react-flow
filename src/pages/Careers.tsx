@@ -189,7 +189,47 @@ const Careers = () => {
         "Collaborate with experts from law, AI, and finance domains",
         "Build technology that will digitally empower the justice ecosystem"
       ]
-    }
+    },
+    {
+  "id": 6,
+  "title": "Offline Marketing & Client Engagement Executive",
+  "department": "Core Growth Team",
+  "location": "Mumbai (Onsite / Field Role)",
+  "type": "Full-time",
+  "experience": "2–5 years",
+  "description": "Be the on-ground face of LawgicHub AI, India’s first AI Legal Infrastructure Platform. As part of our Core Growth Team, you’ll lead client engagement and offline marketing initiatives across Mumbai’s legal ecosystem. This role blends marketing, business development, and relationship-building, empowering you to connect directly with lawyers, law firms, and enterprises to drive adoption of AI-driven legal solutions.",
+  "responsibilities": [
+    "Execute offline marketing campaigns and client outreach programs across Mumbai’s legal and corporate network",
+    "Identify, connect, and engage with law firms, advocates, bar associations, and corporate legal departments for demos and trials",
+    "Send personalized business invites and coordinate legal tech workshops and demo sessions",
+    "Organize and represent LawgicHub AI at legal events, conferences, expos, and seminars",
+    "Develop and distribute marketing materials, brochures, and event collaterals",
+    "Maintain a strong network of legal professionals and institutions for brand advocacy and product awareness",
+    "Collaborate with Sales and Product teams to align messaging and demonstrate key features effectively during meetings",
+    "Generate qualified leads through in-person meetings, referrals, and field campaigns",
+    "Collect client feedback and market insights to refine outreach and product strategy",
+    "Work closely with the Social Media & Brand Marketing team to align offline and online campaigns"
+  ],
+  "requirements": [
+    "2–5 years of experience in Offline Marketing, Business Development, or Field Sales, preferably in Tech, SaaS, or LegalTech sectors",
+    "Strong communication, presentation, and interpersonal skills",
+    "Established network within Mumbai’s legal or business community is a major plus",
+    "Experience organizing events, product demos, and client meetings",
+    "Proficiency in preparing business decks, proposals, and client communication",
+    "Comfortable traveling within Mumbai for client visits and events",
+    "Self-driven, confident, and passionate about technology and innovation",
+    "Bonus: Prior experience working with legal professionals, startups, or SaaS platforms"
+  ],
+  "benefits": [
+    "Be part of the core growth team of one of India’s fastest-growing AI LegalTech startups",
+    "Engage directly with top lawyers, legal firms, and enterprise decision-makers",
+    "Hybrid flexibility with ownership of on-ground marketing operations in Mumbai",
+    "Competitive compensation with performance-based incentives for client conversions and partnerships",
+    "Opportunity for rapid growth into Regional Marketing or Partnership Lead roles",
+    "Work closely with visionary founders driving AI transformation in the legal sector"
+  ]
+}
+
   ];
 
   return (

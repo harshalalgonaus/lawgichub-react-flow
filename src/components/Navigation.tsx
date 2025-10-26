@@ -81,7 +81,7 @@ export const Navigation = () => {
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200 flex-shrink-0"
           >
             <img
-              src="/lawgichub_icon1.png"
+              src="/logo.gif"
               alt="Lawgichub Logo"
               className="h-15 w-12 sm:h-12 sm:w-20 md:h-15 md:w-12"
             />
